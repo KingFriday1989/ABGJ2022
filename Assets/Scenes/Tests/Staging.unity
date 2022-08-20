@@ -463,6 +463,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spy Car (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3001552591186135115, guid: 152529e82ffb0d240bd75314e586b70c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3003058934441538937, guid: 152529e82ffb0d240bd75314e586b70c,
         type: 3}
       propertyPath: m_RootOrder

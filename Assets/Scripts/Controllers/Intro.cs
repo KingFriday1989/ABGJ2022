@@ -1,13 +1,20 @@
 ﻿using Core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections;
+using UnityEngine;
 
-namespace Controllers
+namespace DoubleAgent.Controllers
 {
     public sealed class Intro : Scene<Intro>
     {
+        private void Start()
+        {
+            StartCoroutine(Init());    
+        }
+
+        IEnumerator Init()
+        {
+            yield return new WaitForSeconds(3);
+            LoadScene(1); //Main Menu
+        }
     }
 }

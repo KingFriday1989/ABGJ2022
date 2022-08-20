@@ -19,7 +19,7 @@ namespace DoubleAgent.Controllers.Actors
             if (actor.ActorData.IsPlayer)
                 DoMovePlayer();
 
-            AnimationState();
+            //AnimationState();
         }
 
         void DoMovePlayer()
@@ -29,7 +29,7 @@ namespace DoubleAgent.Controllers.Actors
                 if (!actor.ActorData.isOnGround)
                     actor.ActorData.isOnGround = true;
 
-                actor.ActorData.move = transform.right * actor.ActorData.MovX + transform.forward * actor.ActorData.MovY;
+                actor.ActorData.move = Vector3.right * actor.ActorData.MovX + Vector3.forward * actor.ActorData.MovY;
                 actor.ActorData.velocity = Converter.ChangeY(actor.ActorData.velocity, -6f);
             }
             else
@@ -44,8 +44,10 @@ namespace DoubleAgent.Controllers.Actors
             }
 
             actor.ActorData.move = Vector3.ClampMagnitude(actor.ActorData.move, 1);
-            (actor as ActorPlayer).CharacterController.Move(actor.ActorData.move * actor.ActorData.Speed * Time.fixedDeltaTime + actor.ActorData.velocity * Time.fixedDeltaTime);
-            //RotateCharacter();
+            var movePos = actor.ActorData.move * actor.ActorData.Speed * Time.fixedDeltaTime + actor.ActorData.velocity * Time.fixedDeltaTime;
+            Debug.Log(movePos);
+            (actor as ActorPlayer).CharacterController.Move(movePos);
+            RotateCharacter();
         }
 
         void AnimationState()
@@ -66,8 +68,7 @@ namespace DoubleAgent.Controllers.Actors
 
         void RotateCharacter()
         {
-            var move = actor.ActorData.move;
-            actor.transform.forward = move;
+            actor.transform.forward = actor.ActorData.move;
         }
 
         public static bool isGrounded(Transform transform, CharacterController characterController)

@@ -32,8 +32,9 @@ namespace DoubleAgent.Controllers.States.Actors
         {
             if (actor != null)
             {
-                AnimationController.SetFloat("MovY", actor.ActorData.MovY);
-                AnimationController.SetFloat("MovX", actor.ActorData.MovX);
+                AnimationController.SetFloat("MovX", actor.ActorData.AnimMovX);
+                AnimationController.SetFloat("MovY", actor.ActorData.AnimMovY);
+                AnimationController.SetFloat("Speed", actor.ActorData.Speed);
             }
         }
 
@@ -41,6 +42,7 @@ namespace DoubleAgent.Controllers.States.Actors
         {
             AnimationController.SetFloat("MovY", 0);
             AnimationController.SetFloat("MovX", 0);
+            AnimationController.SetFloat("Speed", 1);
         }
     }
 }

@@ -12,6 +12,7 @@ namespace Controllers.Actors
         public ActorData ActorData;
         public ActorController ActorController;
         public ActorAnimator ActorAnimator;
+        public NavMeshAgent NavMeshAgent;
 
         public virtual void Awake()
         {
@@ -22,7 +23,7 @@ namespace Controllers.Actors
                 ActorController = GetComponent<ActorController>();
 
             if (ActorAnimator == null)
-                ActorAnimator = GetComponentInChildren<ActorAnimator>();
+                ActorAnimator = GetComponent<ActorAnimator>();
         }
         public virtual void Start()
         {

@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 namespace DoubleAgent.Controllers.Utility
 {
-    public sealed class ButtonBehaviour : ButtonMechanicsBase, IPointerEnterHandler
+    public sealed class ButtonBehaviour : ButtonMechanicsBase, IPointerEnterHandler, IPointerExitHandler
     {
         [SerializeField] private int Channel;
         [SerializeField] private AudioClip HoverSound;
@@ -22,7 +22,14 @@ namespace DoubleAgent.Controllers.Utility
         public void OnPointerEnter(PointerEventData eventData)
         {
             if (!IsEnabled || !button.interactable) return;
+            LeanTween.scale(gameObject, 1.2f * Vector3.one, 0.5f).setEaseSpring();
             SoundManager.PlaySoundOnChannel(HoverSound, Channel);
+        }
+
+        public void OnPointerExit(PointerEventData eventData)
+        {
+            if (!IsEnabled || !button.interactable) return;
+            LeanTween.scale(gameObject, Vector3.one, 0.5f).setEaseSpring();
         }
 
         protected override void OnClick()

@@ -2,6 +2,7 @@
     "name": "TechSkullStudios.DoubleAgent",
     "rootNamespace": "",
     "references": [
+        "GUID:c677688ef3042284595272795d5b252d",
         "GUID:75469ad4d38634e559750d17036d5f7c",
         "GUID:6055be8ebefd69e48b49212b09b47b2f",
         "GUID:2eedbb55c9fbc6c4e8aa80e235f1c991",

@@ -150,9 +150,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsPlayer: 0
+  NavMeshAgent: {fileID: 0}
   Renderers: []
   ItemHolder: {fileID: 5486921660686864364}
   MovX: 0
   MovY: 0
   Speed: 0
   TargetMove: {fileID: 0}
+  forward: 0
+  backward: 0
+  stepLeft: 0
+  stepRight: 0
+--- !u!114 &8013743803154649664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5487783805520010426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 219cae3788308e444a81d17c956756a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

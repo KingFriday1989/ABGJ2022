@@ -39,5 +39,12 @@ namespace Data.Actors
         public float AnimMovX;
         public float AnimMovY;
         #endregion
+
+        #region WEAPONS
+        public Weapon pistol;
+        public Weapon grenade;
+
+
+        #endregion
     }
 }

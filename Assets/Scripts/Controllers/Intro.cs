@@ -13,7 +13,7 @@ namespace DoubleAgent.Controllers
 
         IEnumerator Init()
         {
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(9);
             LoadScene(1); //Main Menu
         }
     }

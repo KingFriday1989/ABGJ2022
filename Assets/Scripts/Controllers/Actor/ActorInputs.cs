@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+
 namespace DoubleAgent.Controllers.Actors
 {
     public class ActorInputs : MonoBehaviour
@@ -58,15 +59,23 @@ namespace DoubleAgent.Controllers.Actors
             else
                 actor.ActorData.moveStepRight = false;
 
+
+            //Fire Pistol
+            if (Input.GetKey(KeyCode.Mouse0))
+            {
+                actor.ActorData.pistol.Fire();
+            }
+            //Throw Grenade
+            if (Input.GetKey(KeyCode.Mouse1))
+            {
+                actor.ActorData.grenade.Fire();
+            }
+
             if (Input.GetKey(KeyCode.LeftShift))
                 actor.ActorData.Sprint = true;
             else
                 actor.ActorData.Sprint = false;
 
-            if (Input.GetKey(KeyCode.Mouse0))
-            {
-
-            }
         }
 
         void ActorAnim()

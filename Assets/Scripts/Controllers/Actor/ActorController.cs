@@ -19,7 +19,7 @@ namespace DoubleAgent.Controllers.Actors
             if (actor.ActorData.IsPlayer)
                 DoMovePlayer();
 
-            //AnimationState();
+            AnimationState();
         }
 
         void DoMovePlayer()

@@ -1,11 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using Controllers.States.Actors;
+using DoubleAgent.Controllers.States.Actors;
 using Helpers;
-using Data;
+using UnityEngine;
 
-namespace Controllers.Actors
+namespace DoubleAgent.Controllers.Actors
 {
     public class ActorController : MonoBehaviour
     {
@@ -24,7 +21,6 @@ namespace Controllers.Actors
 
             AnimationState();
         }
-
 
         void DoMovePlayer()
         {
@@ -51,6 +47,7 @@ namespace Controllers.Actors
             (actor as ActorPlayer).CharacterController.Move(actor.ActorData.move * actor.ActorData.Speed * Time.fixedDeltaTime + actor.ActorData.velocity * Time.fixedDeltaTime);
             //RotateCharacter();
         }
+
         void AnimationState()
         {
             bool isMoving = actor.ActorData.MovX != 0 || actor.ActorData.MovY != 0;
@@ -83,10 +80,10 @@ namespace Controllers.Actors
             else
                 return false;
         }
+
         public static bool SphereCheck(Vector3 Position, Vector3 Direction, float Radius, float Distance, LayerMask layerMask)
         {
             return Physics.SphereCast(Position, Radius, Direction, out RaycastHit hit, Distance, layerMask);
         }
     }
 }
-

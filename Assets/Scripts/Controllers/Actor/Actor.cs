@@ -1,21 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.AI;
 using Data.Actors;
-using Controllers.States.Actors;
+using DoubleAgent.Controllers.States.Actors;
+using UnityEngine.AI;
 
-namespace Controllers.Actors
+namespace DoubleAgent.Controllers.Actors
 {
-    public abstract class Actor : MonoBehaviour
+    public abstract class Actor : Core.Behaviour
     {
         public ActorData ActorData;
         public ActorController ActorController;
         public ActorAnimator ActorAnimator;
         public NavMeshAgent NavMeshAgent;
 
-        public virtual void Awake()
+        protected override void Awake()
         {
+            base.Awake();
+
             if(ActorData == null)
                 ActorData = GetComponent<ActorData>();
 
@@ -25,6 +24,7 @@ namespace Controllers.Actors
             if (ActorAnimator == null)
                 ActorAnimator = GetComponent<ActorAnimator>();
         }
+
         public virtual void Start()
         {
 

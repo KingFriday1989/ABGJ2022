@@ -1,23 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
+using Controllers;
 using UnityEngine;
-using Controllers.States;
 
-public abstract class AnimationState_Base : Controllers.AnimationState
+namespace DoubleAgent.Controllers.States
 {
-    [SerializeField] string _DefaultAnimationKey;
-    public override string DefaultAnimationKey => _DefaultAnimationKey;
-
-    [SerializeField] Animator _AnimationController;
-    public override Animator AnimationController => _AnimationController;
-
-    public override bool PlaysAnimationOnActivate => true;
-
-    public virtual bool CanSetState => ActiveStateMachine != null;
-
-    protected T GetStateMachine<T>()
-                where T : AnimationStateMachine_Base
+    public abstract class AnimationState_Base : AnimationState<AnimationStateMachine_Base, AnimationState_Base>
     {
-        return ActiveStateMachine as T;
+        [SerializeField] string _DefaultAnimationKey;
+        public override string DefaultAnimationKey => _DefaultAnimationKey;
+
+        //[SerializeField] Animator _AnimationController;
+        public override Animator AnimationController => ActiveStateMachine != null ? ActiveStateMachine.animator : null;
+
+        public override bool PlaysAnimationOnActivate => true;
+
+        public virtual bool CanSetState => ActiveStateMachine != null;
+
+        protected T GetStateMachine<T>() where T : AnimationStateMachine_Base
+        => ActiveStateMachine as T;
     }
 }

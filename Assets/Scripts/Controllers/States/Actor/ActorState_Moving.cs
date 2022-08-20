@@ -1,16 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using AnimationState = Controllers.AnimationState;
-using Editor;
-using Helpers.Extensions;
-using Controllers.Actors;
+using DoubleAgent.Controllers.Actors;
 
-namespace Controllers.States.Actors
+namespace DoubleAgent.Controllers.States.Actors
 {
     public class ActorState_Moving : AnimationState_Base
     {
         public const string Filename = "Walking";
+
         private Actor actor;
 
         protected override bool CanInitiate
@@ -27,13 +22,13 @@ namespace Controllers.States.Actors
         }
 
         //On Start
-        protected override void OnPlayAnimation(AnimationStateMachine stateMachine, string animationKey)
+        protected override void OnPlayAnimation(AnimationStateMachine_Base stateMachine, string animationKey)
         {
             actor = GetStateMachine<ActorAnimator>().actor;
         }
 
         //Update
-        protected override void OnActiveInStateMachine(AnimationStateMachine stateMachine)
+        protected override void OnActiveInStateMachine(AnimationStateMachine_Base stateMachine)
         {
             if (AnimationController != null)
             {
@@ -42,7 +37,7 @@ namespace Controllers.States.Actors
             }
         }
 
-        protected override void OnStateCanceled(AnimationStateMachine stateMachine)
+        protected override void OnStateCanceled(AnimationStateMachine_Base stateMachine)
         {
             AnimationController.SetFloat("MovY", 0);
             AnimationController.SetFloat("MovX", 0);

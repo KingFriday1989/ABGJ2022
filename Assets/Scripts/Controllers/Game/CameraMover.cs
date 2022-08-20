@@ -1,23 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
+using DoubleAgent.Controllers.Actors;
 using UnityEngine;
-using Controllers.Actors;
 
-public class CameraMover : MonoBehaviour
+namespace DoubleAgent.Controllers.Game
 {
-    public ActorPlayer ActorPlayer;
-    public Vector3 DefaultPos = new Vector3(0,15,-15);
-    // Start is called before the first frame update
-    void Start()
+    public class CameraMover : Core.Behaviour
     {
-        if(ActorPlayer == null)
-        ActorPlayer = FindObjectOfType<ActorPlayer>();
-    }
+        public ActorPlayer ActorPlayer;
+        public Vector3 DefaultPos = new Vector3(0, 15, -15);
+        
+        void Start()
+        {
+            if (ActorPlayer == null)
+                ActorPlayer = FindObjectOfType<ActorPlayer>();
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        transform.position = ActorPlayer.transform.position + DefaultPos;
-        transform.LookAt(ActorPlayer.transform.position, Vector3.up);
+        void Update()
+        {
+            transform.position = ActorPlayer.transform.position + DefaultPos;
+            transform.LookAt(ActorPlayer.transform.position, Vector3.up);
+        }
     }
 }

@@ -8,8 +8,7 @@ namespace DoubleAgent.Controllers.Actors
         protected override void Awake()
         {
             base.Awake();
-            NavMeshAgent = GetComponent<NavMeshAgent>();
-            GetComponent<CharacterController>().enabled = false;
+            CharacterController.enabled = false;
             ActorData.IsPlayer = false;
         }
     }

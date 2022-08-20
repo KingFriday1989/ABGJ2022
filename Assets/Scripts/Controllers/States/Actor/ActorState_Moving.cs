@@ -30,7 +30,7 @@ namespace DoubleAgent.Controllers.States.Actors
         //Update
         protected override void OnActiveInStateMachine(AnimationStateMachine_Base stateMachine)
         {
-            if (AnimationController != null)
+            if (actor != null)
             {
                 AnimationController.SetFloat("MovY", actor.ActorData.MovY);
                 AnimationController.SetFloat("MovX", actor.ActorData.MovX);

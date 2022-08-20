@@ -1,6 +1,7 @@
 using Data.Actors;
 using DoubleAgent.Controllers.States.Actors;
 using UnityEngine.AI;
+using UnityEngine;
 
 namespace DoubleAgent.Controllers.Actors
 {
@@ -10,6 +11,7 @@ namespace DoubleAgent.Controllers.Actors
         public ActorController ActorController;
         public ActorAnimator ActorAnimator;
         public NavMeshAgent NavMeshAgent;
+        public CharacterController CharacterController;
 
         protected override void Awake()
         {
@@ -23,6 +25,12 @@ namespace DoubleAgent.Controllers.Actors
 
             if (ActorAnimator == null)
                 ActorAnimator = GetComponent<ActorAnimator>();
+
+            if(CharacterController == null)
+                CharacterController = GetComponent<CharacterController>();
+
+            if(NavMeshAgent == null)
+                NavMeshAgent = GetComponent<NavMeshAgent>();
         }
 
         public virtual void Start()

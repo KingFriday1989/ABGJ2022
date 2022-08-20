@@ -1,7 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using AnimationState = Controllers.AnimationState;
+using Editor;
+using Helpers.Extensions;
+using Controllers.Actors;
 
 namespace Controllers.States.Actors
 {

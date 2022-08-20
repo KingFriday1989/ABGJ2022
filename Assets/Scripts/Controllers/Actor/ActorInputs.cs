@@ -8,8 +8,8 @@ namespace Controllers.Actors
 {
     public class ActorInputs : MonoBehaviour
     {
-        Actor actor;
-        private void Awake()
+        public Actor actor;
+        private void Start()
         {
             actor = GetComponent<Actor>();
         }
@@ -20,6 +20,7 @@ namespace Controllers.Actors
                 ActorInput();
             else
                 ActorNavInput();
+
             MovementFloats();
         }
 
@@ -32,13 +33,15 @@ namespace Controllers.Actors
                 Physics.Raycast(ray, out RaycastHit hitInfo);
                 actor.ActorData.ClickTarget = hitInfo.point;
 
-                SetDestination(actor.ActorData.ClickTarget);
+                //SetDestination(actor.ActorData.ClickTarget);
             }
         }
         void ActorInput()
         {
             if (Input.GetKey(KeyCode.W))
+            {
                 actor.ActorData.forward = true;
+            }
             else
                 actor.ActorData.forward = false;
 

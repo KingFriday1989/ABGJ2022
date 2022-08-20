@@ -24,8 +24,6 @@ namespace Controllers.Actors
 
             if (ActorAnimator == null)
                 ActorAnimator = GetComponent<ActorAnimator>();
-            if(NavMeshAgent == null)
-                NavMeshAgent = GetComponent<NavMeshAgent>();
         }
         public virtual void Start()
         {

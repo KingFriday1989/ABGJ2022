@@ -1,3 +1,4 @@
+using DoubleAgent.Data;
 using DoubleAgent.Views.Utility;
 using Editor;
 using Helpers;
@@ -22,14 +23,16 @@ namespace DoubleAgent.Views.Game
             {
                 //if (transform.childCount > 0) return;
                 var flame = pilotFlame.SelectRandom();
-                transform.DestroyChildren();
+                //transform.ClearChildren();
+                ClearChildren();
                 Instantiate(flame, transform);
                 isLit = true;
             }
             else if(!isOnFire)
             {
                 //if (transform.childCount > 0) return;
-                transform.DestroyChildren();
+                ClearChildren();
+                //transform.ClearChildren();
                 base.CreateParticles();
                 isOnFire = true;
                 OnFire?.Invoke();
@@ -40,19 +43,40 @@ namespace DoubleAgent.Views.Game
         public async void Smoke(float waitTime = 0f)
         {
             if (isSmoking) return;
+            await Timer.WaitForSeconds(waitTime);
             var fire = transform.GetChild(0);
-            var smoke = fire.GetComponentInChildren<Smoke>(true);
+            Smoke smoke = fire.GetComponentInChildren<Smoke>(true);
             if (smoke == null) return;
            
-            await Timer.WaitForSeconds(waitTime);
             smoke.ShowSmoke();
             isSmoking = true;
         }
 
         //--------------------------
-        private void OnTriggerEnter(Collision collision)
+        private void OnTriggerEnter(Collider other)
         {
-            Log(collision.gameObject.name);
+            //Log(other.gameObject.name);
+            if (isOnFire || !other.CompareLayer(Constants.LAYER_PROJECTILE)) return;
+            CreateParticles();
+        }
+
+        private void ClearChildren()
+        {
+            for(var i = transform.childCount - 1; i >= 0; i--)
+            {
+                Destroy(transform.GetChild(i).gameObject);
+            }
+        }
+
+        [InspectorButton("EnableGravity")]
+        [SerializeField] bool m_EnableGravity;
+
+        [ContextMenu("Enable Gravity")]
+        public void EnableGravity()
+        {
+            transform.UnParent();
+            GetComponent<BoxCollider>().enabled = true;
+            GetComponent<Rigidbody>().useGravity = true;
         }
     }
 }

@@ -14,7 +14,7 @@ namespace DoubleAgent.Views.Utility
         [ContextMenu("Create Particles")]
         public virtual void CreateParticles()
         {
-            if (transform.childCount > 0) return;
+            //if (transform.childCount > 0) return;
             var p = Particles.SelectRandom();
             Instantiate(p, transform);
         }

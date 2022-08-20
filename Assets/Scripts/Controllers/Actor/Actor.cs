@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using Data.Actors;
+using Controllers.States.Actors;
 
 namespace Controllers.Actors
 {
@@ -10,8 +11,7 @@ namespace Controllers.Actors
     {
         public ActorData ActorData;
         public ActorController ActorController;
-        public NavMeshAgent NavMeshAgent;
-
+        public ActorAnimator ActorAnimator;
 
         public virtual void Awake()
         {
@@ -21,8 +21,8 @@ namespace Controllers.Actors
             if(ActorController == null)
                 ActorController = GetComponent<ActorController>();
 
-            if(NavMeshAgent == null)
-                NavMeshAgent = GetComponent<NavMeshAgent>();
+            if (ActorAnimator == null)
+                ActorAnimator = GetComponent<ActorAnimator>();
         }
         public virtual void Start()
         {

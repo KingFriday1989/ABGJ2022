@@ -6,6 +6,8 @@ namespace Controllers.Actors
 {
     public class ActorPlayer : Actor
     {
+        public CharacterController CharacterController;
+
         private void Awake()
         {
             base.Awake();

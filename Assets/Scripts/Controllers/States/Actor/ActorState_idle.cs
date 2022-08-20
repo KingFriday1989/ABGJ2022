@@ -1,16 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using AnimationState = Controllers.AnimationState;
-using Editor;
-using Helpers.Extensions;
-using Controllers.Actors;
-
-namespace Controllers.States.Actors
+namespace DoubleAgent.Controllers.States.Actors
 {
     public class ActorState_Idle : AnimationState_Base
     {
         public const string Filename = "Idle";
+
         protected override bool CanInitiate
         {
             get

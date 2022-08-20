@@ -1,14 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
+using Controllers;
 using UnityEngine;
 
-namespace Controllers.States
+namespace DoubleAgent.Controllers.States
 {
-    public abstract class AnimationStateMachine_Base : Controllers.AnimationStateMachine
+    public abstract class AnimationStateMachine_Base : AnimationStateMachine<AnimationStateMachine_Base, AnimationState_Base>
     {
         [SerializeField] private Animator _animator;
         public Animator animator => _animator;
     }
 }
-
-

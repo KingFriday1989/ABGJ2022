@@ -1,15 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace Controllers.Actors
+namespace DoubleAgent.Controllers.Actors
 {
     public class ActorAI : Actor
     {
-        public NavMeshAgent NavMeshAgent;
-
-        void Awake()
+        protected override void Awake()
         {
             base.Awake();
             NavMeshAgent = GetComponent<NavMeshAgent>();
@@ -18,4 +14,3 @@ namespace Controllers.Actors
         }
     }
 }
-

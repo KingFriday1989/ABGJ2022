@@ -1,17 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class ActorState_Attack : MonoBehaviour
+namespace DoubleAgent.Controllers.States
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
+    public class ActorState_Attack : MonoBehaviour
     {
         
     }

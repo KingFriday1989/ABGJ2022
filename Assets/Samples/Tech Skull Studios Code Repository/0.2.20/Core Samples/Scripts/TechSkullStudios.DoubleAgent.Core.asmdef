@@ -1,5 +1,5 @@
 {
-    "name": "TechSkullStudios.SecretAgent.Core",
+    "name": "TechSkullStudios.DoubleAgent.Core",
     "rootNamespace": "",
     "references": [
         "TechSkullStudios.CodeRepository.Core",

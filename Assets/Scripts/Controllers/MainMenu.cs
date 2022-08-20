@@ -1,6 +1,6 @@
 using Core;
 
-namespace Controllers
+namespace DoubleAgent.Controllers
 {
     public sealed class MainMenu : Scene<MainMenu>
     {

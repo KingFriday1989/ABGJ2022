@@ -2,7 +2,7 @@
 
 namespace DoubleAgent.Controllers
 {
-    public sealed class Intro : Scene<Intro>
+    public sealed class GameController : Scene<GameController>
     {
     }
 }

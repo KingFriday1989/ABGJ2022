@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
+
 namespace DoubleAgent.Controllers.Actors
 {
     public class ActorInputs : MonoBehaviour
@@ -58,6 +59,18 @@ namespace DoubleAgent.Controllers.Actors
                 actor.ActorData.stepRight = true;
             else
                 actor.ActorData.stepRight = false;
+            //Fire Pistol
+            if(Input.GetKey(KeyCode.Mouse0))
+            {
+                actor.ActorData.pistol.Fire();
+            }
+            //Throw Grenade
+            if (Input.GetKey(KeyCode.Mouse1))
+            {
+                actor.ActorData.grenade.Fire();
+            }
+
+            
         }
 
         void ActorNavInput()

@@ -28,5 +28,12 @@ namespace Data.Actors
         public Vector3 move;
         public Vector3 velocity;
         #endregion
+
+        #region WEAPONS
+        public Weapon pistol;
+        public Weapon grenade;
+
+
+        #endregion
     }
 }

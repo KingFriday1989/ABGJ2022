@@ -75,3 +75,84 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07ccb08ca05868c4ba24c483f1888f85, type: 3}
+--- !u!4 &5486921660686864364 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4046278705761860, guid: 07ccb08ca05868c4ba24c483f1888f85,
+    type: 3}
+  m_PrefabInstance: {fileID: 5488505018963739048}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5487783805520010426 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1003269721758994, guid: 07ccb08ca05868c4ba24c483f1888f85,
+    type: 3}
+  m_PrefabInstance: {fileID: 5488505018963739048}
+  m_PrefabAsset: {fileID: 0}
+--- !u!195 &7644741266560925752
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5487783805520010426}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &6289061578790208378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5487783805520010426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a77a0f1b5916f44397ad633f191e4c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActorData: {fileID: 0}
+  ActorController: {fileID: 0}
+  NavMeshAgent: {fileID: 7644741266560925752}
+--- !u!114 &1370232100211332875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5487783805520010426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00e7448fe99f05d4eb726890e34db854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Actor: {fileID: 0}
+--- !u!114 &6815664261878565724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5487783805520010426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0d310bd5e42dc7469ad013ba7171a8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsPlayer: 0
+  Renderers: []
+  ItemHolder: {fileID: 5486921660686864364}
+  MovX: 0
+  MovY: 0
+  Speed: 0
+  TargetMove: {fileID: 0}

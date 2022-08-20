@@ -1,0 +1,32 @@
+{
+    "name": "TechSkullStudios.DoubleAgent",
+    "rootNamespace": "",
+    "references": [
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:2eedbb55c9fbc6c4e8aa80e235f1c991",
+        "GUID:0cc717ae8437f6f48ae4d9e0ffd6e597",
+        "GUID:463bc4196a276be4dadec66b14cbbb67",
+        "GUID:c69d23c2e28952d429b07699aca905e1",
+        "GUID:c35fa4d6630151f46a5d057291600cbf",
+        "GUID:da94408c619d5454ca4557ad5d2de50c",
+        "GUID:42455d00660b2d648840d80eac12b088",
+        "GUID:a259c6c9effb4a04da0110e6880b5636",
+        "GUID:8914df5dae7983a4da34040dae67f06b",
+        "GUID:77e337fd0c8e93a42ae3bf12aa98192d",
+        "GUID:d7a691bc32e9fdb4f8b584e151ab2feb",
+        "GUID:d62751f9b8f769a4d963343124607cc3",
+        "GUID:1ff697dde0f394f41ae11f8e6a2bad75",
+        "GUID:bf7f3621b9d99e7439eac4e4082dc853",
+        "GUID:b305da29d36b59e4d9f4060d752d88be"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

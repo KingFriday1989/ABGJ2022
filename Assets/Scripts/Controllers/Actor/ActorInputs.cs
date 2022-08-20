@@ -1,18 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
-using Helpers.Extensions;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace Controllers.Actors
+namespace DoubleAgent.Controllers.Actors
 {
     public class ActorInputs : MonoBehaviour
     {
         public Actor actor;
+        
         private void Start()
         {
             actor = GetComponent<Actor>();
         }
+        
         private void Update()
         {
             MouseInput();
@@ -23,7 +22,6 @@ namespace Controllers.Actors
 
             MovementFloats();
         }
-
 
         void MouseInput()
         {
@@ -36,6 +34,7 @@ namespace Controllers.Actors
                 //SetDestination(actor.ActorData.ClickTarget);
             }
         }
+
         void ActorInput()
         {
             if (Input.GetKey(KeyCode.W))
@@ -60,6 +59,7 @@ namespace Controllers.Actors
             else
                 actor.ActorData.stepRight = false;
         }
+
         void ActorNavInput()
         {
             if (actor.ActorData.NavMeshAgent.velocity != Vector3.zero)
@@ -108,6 +108,7 @@ namespace Controllers.Actors
                 actor.ActorData.stepRight = false;
             }
         }
+
         void MovementFloats()
         {
             actor.ActorData.MovY = Mathf.Lerp(actor.ActorData.MovY, (actor.ActorData.forward) ? 1f : (actor.ActorData.backward) ? -1f : 0f, 2f * Time.fixedDeltaTime);
@@ -140,7 +141,6 @@ namespace Controllers.Actors
             }
         }
 
-
         private bool SetDestination(Vector3 targetDestination)
         {
             NavMeshHit hit;
@@ -153,4 +153,3 @@ namespace Controllers.Actors
         }
     }
 }
-

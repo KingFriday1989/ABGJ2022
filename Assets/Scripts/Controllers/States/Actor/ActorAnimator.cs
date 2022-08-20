@@ -1,12 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using AnimationState = Controllers.AnimationState;
+using DoubleAgent.Controllers.Actors;
 using Editor;
 using Helpers.Extensions;
-using Controllers.Actors;
+using UnityEngine;
 
-namespace Controllers.States.Actors
+namespace DoubleAgent.Controllers.States.Actors
 {
     public sealed class ActorAnimator : AnimationStateMachine_Base
     {
@@ -14,16 +11,12 @@ namespace Controllers.States.Actors
         public const string Filename = "Character Animator";
 
         #region VARIABLE DECLARATIONS
-        private AnimationState _DefaultState;
-        protected override AnimationState DefaultState => _DefaultState;
-        public AnimationState DefaultAnimationState => _DefaultState;
+        private AnimationState_Base _DefaultState;
+        protected override AnimationState_Base DefaultState => _DefaultState;
+        public AnimationState_Base DefaultAnimationState => _DefaultState;
 
         public ActorState_Idle actorState_Idle => GetState<ActorState_Idle>();
         public ActorState_Moving actorState_Moving => GetState<ActorState_Moving>();
-
-        public new AnimationState CurrentState => base.CurrentState;
-        public new AnimationState PreviousState => base.PreviousState;
-        public new AnimationState PreviousStateFromHistory(int backCount) => base.PreviousStateFromHistory(backCount);
         #endregion
 
         #region Setup
@@ -44,23 +37,6 @@ namespace Controllers.States.Actors
                 ReturnToDefaultState();
         }
         #endregion
-
-        public new ActorState SetState<ActorState>()
-            where ActorState : AnimationState_Base
-        {
-            if (HasState<ActorState>())
-            {
-                if (TryGetState(out ActorState state))
-                {
-                    if (!state.CanSetState)
-                    {
-                        return CurrentState as ActorState;
-                    }
-                }
-                return base.SetState<ActorState>();
-            }
-            return CurrentState as ActorState;
-        }
 
         #region Debug
         [Header("Debugging")]

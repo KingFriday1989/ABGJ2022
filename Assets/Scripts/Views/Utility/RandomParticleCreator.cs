@@ -12,9 +12,9 @@ namespace DoubleAgent.Views.Utility
         [SerializeField] bool m_CreateParticles;
 
         [ContextMenu("Create Particles")]
-        public void CreateParticles()
+        public virtual void CreateParticles()
         {
-            if (transform.childCount > 0) return;
+            //if (transform.childCount > 0) return;
             var p = Particles.SelectRandom();
             Instantiate(p, transform);
         }

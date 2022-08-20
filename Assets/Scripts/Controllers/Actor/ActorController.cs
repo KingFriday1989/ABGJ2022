@@ -1,6 +1,7 @@
 using DoubleAgent.Controllers.States.Actors;
 using Helpers;
 using UnityEngine;
+using Helpers;
 
 namespace DoubleAgent.Controllers.Actors
 {
@@ -19,6 +20,7 @@ namespace DoubleAgent.Controllers.Actors
             if (actor.ActorData.IsPlayer)
                 DoMovePlayer();
 
+            //ActorAnim();
             AnimationState();
         }
 
@@ -45,11 +47,10 @@ namespace DoubleAgent.Controllers.Actors
 
             actor.ActorData.move = Vector3.ClampMagnitude(actor.ActorData.move, 1);
             var movePos = actor.ActorData.move * actor.ActorData.Speed * Time.fixedDeltaTime + actor.ActorData.velocity * Time.fixedDeltaTime;
-            Debug.Log(movePos);
             (actor as ActorPlayer).CharacterController.Move(movePos);
-            RotateCharacter();
+            //RotateCharacter();
         }
-
+        
         void AnimationState()
         {
             bool isMoving = actor.ActorData.MovX != 0 || actor.ActorData.MovY != 0;
@@ -68,23 +69,34 @@ namespace DoubleAgent.Controllers.Actors
 
         void RotateCharacter()
         {
-            actor.transform.forward = actor.ActorData.move;
+            var target = actor.ActorData.MouseTarget;
+            var lerp = Vector3.Slerp(transform.forward, target - transform.position, Time.deltaTime );
+            transform.forward = lerp;
+
+            var euler = transform.rotation.eulerAngles;
+            euler.x = 0;
+            euler.z = 0;
+            transform.rotation = Quaternion.Euler(euler);
         }
 
         public static bool isGrounded(Transform transform, CharacterController characterController)
         {
-            Vector3 Position = transform.position + new Vector3(0, characterController.height / 2f, 0);
-            float Radius = characterController.radius;
-            float Height = characterController.height;
-            if (SphereCheck(Position, -transform.up, Radius, Height / 2 - Radius + 0.1f, LayerMask.GetMask("Geometry")) || SphereCheck(Position, -transform.up, Radius, Height / 2 - Radius + 0.1f, LayerMask.GetMask("Terrain")))
+            Vector3 Position = transform.position + new Vector3(0,0.1f,0);
+            float Legnth = 0.2f ;
+            if(RayCheck(Position,-transform.up,Legnth))
                 return true;
             else
                 return false;
         }
 
-        public static bool SphereCheck(Vector3 Position, Vector3 Direction, float Radius, float Distance, LayerMask layerMask)
+        public static bool RayCheck(Vector3 Position, Vector3 Direction, float Distance)
         {
-            return Physics.SphereCast(Position, Radius, Direction, out RaycastHit hit, Distance, layerMask);
+            var cast = Physics.Raycast(Position, Direction, out RaycastHit hitInfo, Distance);
+
+            if (hitInfo.collider != null)
+                return true;
+            else
+                return false;
         }
     }
 }

@@ -22,7 +22,7 @@ namespace Controllers.Actors
                 ActorController = GetComponent<ActorController>();
 
             if (ActorAnimator == null)
-                ActorAnimator = GetComponent<ActorAnimator>();
+                ActorAnimator = GetComponentInChildren<ActorAnimator>();
         }
         public virtual void Start()
         {

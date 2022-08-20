@@ -18,9 +18,8 @@ namespace Controllers.States.Actors
         protected override AnimationState DefaultState => _DefaultState;
         public AnimationState DefaultAnimationState => _DefaultState;
 
-        public ActorState_Idle characterState_Idle => GetState<ActorState_Idle>();
-        public ActorState_Moving characterState_Walking => GetState<ActorState_Moving>();
-        //public CharacterState_Talking characterState_Talking => GetState<CharacterState_Talking>();
+        public ActorState_Idle actorState_Idle => GetState<ActorState_Idle>();
+        public ActorState_Moving actorState_Moving => GetState<ActorState_Moving>();
 
         public new AnimationState CurrentState => base.CurrentState;
         public new AnimationState PreviousState => base.PreviousState;
@@ -46,21 +45,21 @@ namespace Controllers.States.Actors
         }
         #endregion
 
-        public new CharacterState SetState<CharacterState>()
-            where CharacterState : AnimationState_Base
+        public new ActorState SetState<ActorState>()
+            where ActorState : AnimationState_Base
         {
-            if (HasState<CharacterState>())
+            if (HasState<ActorState>())
             {
-                if (TryGetState(out CharacterState state))
+                if (TryGetState(out ActorState state))
                 {
                     if (!state.CanSetState)
                     {
-                        return CurrentState as CharacterState;
+                        return CurrentState as ActorState;
                     }
                 }
-                return base.SetState<CharacterState>();
+                return base.SetState<ActorState>();
             }
-            return CurrentState as CharacterState;
+            return CurrentState as ActorState;
         }
 
         #region Debug
@@ -75,11 +74,6 @@ namespace Controllers.States.Actors
         [SerializeField] private bool m_SetWalking;
         [ContextMenu("Moving")]
         private void SetMoving() => SetState<ActorState_Moving>();
-
-        //[InspectorButton("SetTalking", ButtonWidth = 200)]
-        //[SerializeField] private bool m_SetTalking;
-        //[ContextMenu("Talking")]
-        //private void SetTalking() => SetState<CharacterState_Talking>();
         #endregion
     }
 }

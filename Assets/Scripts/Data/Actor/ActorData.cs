@@ -24,6 +24,9 @@ namespace Data.Actors
         public bool backward;
         public bool stepLeft;
         public bool stepRight;
+        public bool isOnGround;
+        public Vector3 move;
+        public Vector3 velocity;
         #endregion
     }
 }

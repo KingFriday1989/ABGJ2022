@@ -11,11 +11,10 @@ namespace Controllers.Actors
 
         void Awake()
         {
-           base.Awake();
-        }
-        void Start()
-        {
-            base.Start();
+            base.Awake();
+            NavMeshAgent = GetComponent<NavMeshAgent>();
+            GetComponent<CharacterController>().enabled = false;
+            ActorData.IsPlayer = false;
         }
     }
 }

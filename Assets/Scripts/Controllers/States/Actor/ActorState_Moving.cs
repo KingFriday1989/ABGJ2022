@@ -38,12 +38,14 @@ namespace Controllers.States.Actors
             if (AnimationController != null)
             {
                 AnimationController.SetFloat("MovY", actor.ActorData.MovY);
-                AnimationController.SetFloat("Horizontal", actor.ActorData.MovX);
+                AnimationController.SetFloat("MovX", actor.ActorData.MovX);
             }
         }
 
         protected override void OnStateCanceled(AnimationStateMachine stateMachine)
         {
+            AnimationController.SetFloat("MovY", 0);
+            AnimationController.SetFloat("MovX", 0);
         }
     }
 }

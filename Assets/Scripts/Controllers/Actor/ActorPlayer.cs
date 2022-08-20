@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace Controllers.Actors
 {
@@ -11,10 +12,9 @@ namespace Controllers.Actors
         private void Awake()
         {
             base.Awake();
-        }
-        private void Start()
-        {
-            base.Start();
+            CharacterController = GetComponent<CharacterController>();
+            GetComponent<NavMeshAgent>().enabled = false;
+            ActorData.IsPlayer = true;
         }
     }
 }

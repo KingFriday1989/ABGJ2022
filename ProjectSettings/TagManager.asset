@@ -3,20 +3,24 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Music
+  - SoundFX
+  - Particles
+  - Target
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Regions
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Geometry
+  - Terrain
+  - Particles
+  - Projectile Trigger Region
+  - Projectile
+  - Bomb
   - 
   - 
   - 

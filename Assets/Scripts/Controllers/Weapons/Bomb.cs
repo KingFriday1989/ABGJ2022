@@ -11,7 +11,7 @@ namespace Controllers.Game
 
         private void OnCollisionEnter(Collision collision)
         {
-            if(collision.gameObject.CompareTag(Constants.TAG_GROUND))
+            //if(collision.gameObject.CompareTag(Constants.TAG_GROUND))
             {
                 GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
                 rend.enabled = false;

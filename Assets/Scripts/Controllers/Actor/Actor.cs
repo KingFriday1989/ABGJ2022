@@ -32,6 +32,31 @@ namespace DoubleAgent.Controllers.Actors
 
             if(NavMeshAgent == null)
                 NavMeshAgent = GetComponent<NavMeshAgent>();
+
+            ActorData.ragdollColliders.Clear();
+            var root = transform.Find("Root");
+            var colliders = root.GetComponentsInChildren<Collider>();
+            for (int i = 0; i < colliders.Length; i++)
+            {
+                ActorData.ragdollColliders.Add(colliders[i]);
+            }
+
+            foreach(var collider in colliders)
+            {
+                collider.enabled = false;
+            }
+
+            ActorData.ragdollRigidbodies.Clear();
+            var rbs = root.GetComponentsInChildren<Rigidbody>();
+            for (int i = 0; i < rbs.Length; i++)
+            {
+                ActorData.ragdollRigidbodies.Add(rbs[i]);
+            }
+
+            foreach (var rb in rbs)
+            {
+                rb.isKinematic = true;
+            }
         }
 
         public virtual void Start()

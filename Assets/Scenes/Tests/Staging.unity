@@ -471,7 +471,7 @@ PrefabInstance:
     - target: {fileID: 3003058934441538937, guid: 152529e82ffb0d240bd75314e586b70c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3003058934441538937, guid: 152529e82ffb0d240bd75314e586b70c,
         type: 3}
@@ -1965,7 +1965,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4473464284870252, guid: 2fff673d81e939d499674d6b2c822fb5, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4473464284870252, guid: 2fff673d81e939d499674d6b2c822fb5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2381,7 +2381,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4044145726038734, guid: ffe16f9903d0b604aab93d16dfb3281d, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4044145726038734, guid: ffe16f9903d0b604aab93d16dfb3281d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5979,13 +5979,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1152348692, guid: ffe16f9903d0b604aab93d16dfb3281d, type: 3}
+      propertyPath: activation.activatable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1152348692, guid: ffe16f9903d0b604aab93d16dfb3281d, type: 3}
+      propertyPath: activation.byActivator
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1152348692, guid: ffe16f9903d0b604aab93d16dfb3281d, type: 3}
+      propertyPath: limitations.byCollision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1152348692, guid: ffe16f9903d0b604aab93d16dfb3281d, type: 3}
+      propertyPath: activation.byConnectivity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1719411279065754, guid: ffe16f9903d0b604aab93d16dfb3281d, type: 3}
       propertyPath: m_Name
       value: SM_Env_Fence_Wood_Straight_01 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4044145726038734, guid: ffe16f9903d0b604aab93d16dfb3281d, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4044145726038734, guid: ffe16f9903d0b604aab93d16dfb3281d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6551,7 +6567,7 @@ Transform:
   m_Children:
   - {fileID: 1667193090}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &2071192200
 Mesh:
@@ -7045,7 +7061,7 @@ PrefabInstance:
     - target: {fileID: 3003058934441538937, guid: 152529e82ffb0d240bd75314e586b70c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3003058934441538937, guid: 152529e82ffb0d240bd75314e586b70c,
         type: 3}

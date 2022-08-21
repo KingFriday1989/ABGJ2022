@@ -25,7 +25,7 @@ namespace DoubleAgent.Helpers
         {
             if (Verify(other))
             {
-                Channel.loop = true;
+                //Channel.loop = true;
                 Channel.clip = screams.SelectRandom();
                 Channel.Play();
             }
@@ -35,7 +35,7 @@ namespace DoubleAgent.Helpers
         {
             if(Verify(other))
             {
-                Channel.loop = false;
+                //Channel.loop = false;
                 await Timer.WaitWhile(() => !Channel.IsFinished());
                 Channel.Stop();
             }

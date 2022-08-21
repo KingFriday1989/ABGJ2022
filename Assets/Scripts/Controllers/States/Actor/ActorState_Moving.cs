@@ -30,7 +30,7 @@ namespace DoubleAgent.Controllers.States.Actors
         //Update
         protected override void OnActiveInStateMachine(AnimationStateMachine_Base stateMachine)
         {
-            if (actor != null)
+            if (AnimationController != null)
             {
                 AnimationController.SetFloat("MovX", actor.ActorData.AnimMovX);
                 AnimationController.SetFloat("MovY", actor.ActorData.AnimMovY);
@@ -40,9 +40,12 @@ namespace DoubleAgent.Controllers.States.Actors
 
         protected override void OnStateCanceled(AnimationStateMachine_Base stateMachine)
         {
-            AnimationController.SetFloat("MovY", 0);
-            AnimationController.SetFloat("MovX", 0);
-            AnimationController.SetFloat("Speed", 1);
+            if (AnimationController != null)
+            {
+                AnimationController.SetFloat("MovY", 0);
+                AnimationController.SetFloat("MovX", 0);
+                AnimationController.SetFloat("Speed", 1);
+            }
         }
     }
 }

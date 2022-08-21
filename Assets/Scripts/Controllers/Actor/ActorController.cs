@@ -19,7 +19,6 @@ namespace DoubleAgent.Controllers.Actors
         {
             if (actor.ActorData.IsPlayer)
                 DoMovePlayer();
-
             AnimationState();
         }
 
@@ -47,11 +46,10 @@ namespace DoubleAgent.Controllers.Actors
             actor.ActorData.move = Vector3.ClampMagnitude(actor.ActorData.move, 1);
             var movePos = actor.ActorData.move * actor.ActorData.Speed * Time.fixedDeltaTime + actor.ActorData.velocity * Time.fixedDeltaTime;
             (actor as ActorPlayer).CharacterController.Move(movePos);
-            RotateCharacter();
+            RotateCharacter(transform, actor.ActorData.MouseTarget);
         }
-        void RotateCharacter()
+        void RotateCharacter(Transform transform, Vector3 target)
         {
-            var target = actor.ActorData.MouseTarget;
             var lerp = Vector3.Slerp(transform.forward, target - transform.position, Time.deltaTime * 8);
             transform.forward = lerp;
 
@@ -66,15 +64,16 @@ namespace DoubleAgent.Controllers.Actors
             bool isMoving = actor.ActorData.IsPlayer ? actor.ActorData.MovX != 0 || actor.ActorData.MovY != 0 : actor.NavMeshAgent.steeringTarget.magnitude > 0;
             if (isMoving)
             {
-                if (/*GameData.State != GameState.InDialogue && */!actor.ActorAnimator.IsCurrentState<ActorState_Moving>())
-                {
+                if (!actor.ActorAnimator.IsCurrentState<ActorState_Moving>())
                     actor.ActorAnimator.actorState_Moving.Begin();
+
+                if (!actor.ActorData.IsPlayer)
+                {
+                    RotateCharacter(transform, actor.NavMeshAgent.steeringTarget);
                 }
             }
-            else if (/*GameData.State != GameState.InDialogue && */!actor.ActorAnimator.IsCurrentState<ActorState_Idle>())
-            {
+            else if (!actor.ActorAnimator.IsCurrentState<ActorState_Idle>())
                 actor.ActorAnimator.ReturnToDefaultState();
-            }
         }
         
         public void DisableDynamite()

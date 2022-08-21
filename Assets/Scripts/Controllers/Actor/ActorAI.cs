@@ -29,34 +29,6 @@ namespace DoubleAgent.Controllers.Actors
             await MoveToPosition(currentWaypoint.position);
         }
 
-        //private void Update()
-        //{
-        //    Log(NavMeshAgent.remainingDistance);
-        //    Log(currentWaypoint);
-        //    
-        //    if(Initialized && (NavMeshAgent.remainingDistance <= 0.25f))
-        //    {
-        //        if (currentWaypoint == null) return;
-        //        currentWaypoint = waypoint.Traverse();
-        //        NavMeshAgent.SetDestination(currentWaypoint.position);
-        //    }
-        //}
-        //
-        //public void StartWaypoint()
-        //{
-        //    if (currentWaypoint == null) return;
-        //    ActorAnimator.actorState_Moving.Begin(); //Set walking
-        //    NavMeshAgent.SetDestination(currentWaypoint.position);
-        //
-        //    //while (this & NavMeshAgent.remainingDistance > 0.1f)
-        //    //{
-        //    //    await Timer.WaitForFrame();
-        //    //}
-        //    //currentWaypoint = currentWaypoint.Traverse();
-        //    //StartWaypoint();
-        //}
-
-        //------------------------
         public NavMeshPath CurrentPath => NavMeshAgent.path;
         public virtual Vector3 PathDestination => NavMeshAgent.pathEndPosition;
         public virtual float RemainingPathDistance => NavMeshAgent.remainingDistance;

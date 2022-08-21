@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731715, g: 0.13414735, b: 0.121078536, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -274,6 +274,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _LoadingScreen: {fileID: 7825460352073788730, guid: c8971ddaa612071448c36477636e7d30,
     type: 3}
+  MusicStart: {fileID: 8300000, guid: 48705f63b0a5e384d913b69e13fca493, type: 3}
+  Player: {fileID: 7368968313412349476}
 --- !u!114 &1609576153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -462,44 +464,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7368968313412349476, guid: 7dc883dcbdcaaa14d8425f2905c3b72a,
+        type: 3}
+      propertyPath: m_TargetCamera
+      value: 
+      objectReference: {fileID: 1385264727}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7dc883dcbdcaaa14d8425f2905c3b72a, type: 3}
---- !u!1 &7368968313412349475 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1153191657186709275, guid: 7dc883dcbdcaaa14d8425f2905c3b72a,
+--- !u!328 &7368968313412349476 stripped
+VideoPlayer:
+  m_CorrespondingSourceObject: {fileID: 7368968313412349476, guid: 7dc883dcbdcaaa14d8425f2905c3b72a,
     type: 3}
   m_PrefabInstance: {fileID: 7368968313412349474}
   m_PrefabAsset: {fileID: 0}
---- !u!328 &7368968313412349476
-VideoPlayer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7368968313412349475}
-  m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 3e3feaadd97116b409f8094630ccf2a3, type: 3}
-  m_TargetCameraAlpha: 1
-  m_TargetCamera3DLayout: 0
-  m_TargetCamera: {fileID: 1385264727}
-  m_TargetTexture: {fileID: 0}
-  m_TimeReference: 0
-  m_TargetMaterialRenderer: {fileID: 0}
-  m_TargetMaterialProperty: <noninit>
-  m_RenderMode: 1
-  m_AspectRatio: 2
-  m_DataSource: 0
-  m_PlaybackSpeed: 1
-  m_AudioOutputMode: 0
-  m_TargetAudioSources: []
-  m_DirectAudioVolumes: []
-  m_Url: 
-  m_EnabledAudioTracks: 
-  m_DirectAudioMutes: 
-  m_ControlledAudioTrackCount: 0
-  m_PlayOnAwake: 1
-  m_SkipOnDrop: 1
-  m_Looping: 0
-  m_WaitForFirstFrame: 1
-  m_FrameReadyEventEnabled: 0
-  m_VideoShaders: []

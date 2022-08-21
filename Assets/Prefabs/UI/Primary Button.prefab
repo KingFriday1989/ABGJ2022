@@ -138,8 +138,8 @@ MonoBehaviour:
   Enabled: 1
   TextType: 0
   Channel: 0
-  HoverSound: {fileID: 8300000, guid: 958f56e9b81858b479af97ff183d03de, type: 3}
-  ClickSound: {fileID: 8300000, guid: bfc13f2a9ce6a014db0b2257eb6ea550, type: 3}
+  HoverSound: {fileID: 8300000, guid: 4b5873a47a8a4564aa5fbd152fe321f9, type: 3}
+  ClickSound: {fileID: 8300000, guid: 4dc233c328abf204fb4dfcedebab9d3e, type: 3}
 --- !u!1 &6761080394154650340
 GameObject:
   m_ObjectHideFlags: 0
@@ -210,8 +210,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0c9bf38802f2b7f40996b469c9a03a74, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 0c9bf38802f2b7f40996b469c9a03a74, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

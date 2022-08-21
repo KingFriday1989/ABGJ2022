@@ -21,6 +21,7 @@ namespace DoubleAgent.Controllers
 
         private void Start()
         {
+            UnityEngine.Cursor.visible = false;
             if(GameData.GlobalMusicChannel != null)
                 GameData.GlobalMusicChannel.Stop();
             //SoundManager.StopGlobalMusic();

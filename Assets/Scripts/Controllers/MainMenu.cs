@@ -22,6 +22,7 @@ namespace DoubleAgent.Controllers
 
         private async void Start()
         {
+            UnityEngine.Cursor.visible = true;
             GameData.State = GameStates.MainMenu;
             //SoundManager.PlayMusicOnChannel(StartMusic, 0);
             //SoundManager.SetMusicVolumeOnChannel(0.3f, 0);

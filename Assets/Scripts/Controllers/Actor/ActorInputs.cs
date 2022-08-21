@@ -120,8 +120,8 @@ namespace DoubleAgent.Controllers.Actors
 
         void MovementFloats()
         {
-            actor.ActorData.MovY = Mathf.Lerp(actor.ActorData.MovY, (actor.ActorData.moveForward) ? 1f : (actor.ActorData.moveBackward) ? -1f : 0f, 2f * Time.fixedDeltaTime);
-            actor.ActorData.MovX = Mathf.Lerp(actor.ActorData.MovX, (actor.ActorData.moveStepRight) ? 1f : (actor.ActorData.moveStepLeft) ? -1f : 0f, 2f * Time.fixedDeltaTime);
+            actor.ActorData.MovY = Mathf.Lerp(actor.ActorData.MovY, (actor.ActorData.moveForward) ? 1f : (actor.ActorData.moveBackward) ? -1f : 0f, 2f * Time.deltaTime);
+            actor.ActorData.MovX = Mathf.Lerp(actor.ActorData.MovX, (actor.ActorData.moveStepRight) ? 1f : (actor.ActorData.moveStepLeft) ? -1f : 0f, 2f * Time.deltaTime);
 
             if (actor.ActorData.MovX > 0.99f)
                 actor.ActorData.MovX = 1f;
@@ -137,22 +137,21 @@ namespace DoubleAgent.Controllers.Actors
             else if (actor.ActorData.MovY < 0.01f && actor.ActorData.MovY > -0.01f)
                 actor.ActorData.MovY = 0f;
 
-            actor.ActorData.Speed = Mathf.Lerp(actor.ActorData.Speed,actor.ActorData.Sprint ? 2f : 1.25f, 8f * Time.deltaTime);
-            if (actor.ActorData.Speed > 1.99f)
-                actor.ActorData.Speed = 2f;
-            else if (actor.ActorData.Speed < 1.26f)
-                actor.ActorData.Speed = 1.25f;
+            actor.ActorData.Speed = Mathf.Lerp(actor.ActorData.Speed,actor.ActorData.Sprint ? 6f : 4f, 8f * Time.deltaTime);
+            if (actor.ActorData.Speed > 5.99f)
+                actor.ActorData.Speed = 6f;
+            else if (actor.ActorData.Speed < 4.01f)
+                actor.ActorData.Speed = 4f;
 
             if (actor.ActorData.IsPlayer & actor.ActorData.move.magnitude > 0.1f || !actor.ActorData.IsPlayer & Vector3.Magnitude(actor.NavMeshAgent.steeringTarget) > 0)
             {
-
-                actor.ActorData.AnimMovY = Mathf.Lerp(actor.ActorData.AnimMovY, (actor.ActorData.forward) ? 1f : (actor.ActorData.backward) ? -1f : 0f, 8f * Time.fixedDeltaTime);
-                actor.ActorData.AnimMovX = Mathf.Lerp(actor.ActorData.AnimMovX, (actor.ActorData.stepRight) ? 1f : (actor.ActorData.stepLeft) ? -1f : 0f, 8f * Time.fixedDeltaTime);
+                actor.ActorData.AnimMovY = Mathf.Lerp(actor.ActorData.AnimMovY, (actor.ActorData.forward) ? 1f : (actor.ActorData.backward) ? -1f : 0f, 8f * Time.deltaTime);
+                actor.ActorData.AnimMovX = Mathf.Lerp(actor.ActorData.AnimMovX, (actor.ActorData.stepRight) ? 1f : (actor.ActorData.stepLeft) ? -1f : 0f, 8f * Time.deltaTime);
             }
             else
             {
-                actor.ActorData.AnimMovY = Mathf.Lerp(actor.ActorData.AnimMovY, 0f, 8f * Time.fixedDeltaTime);
-                actor.ActorData.AnimMovX = Mathf.Lerp(actor.ActorData.AnimMovX, 0f, 8f * Time.fixedDeltaTime);
+                actor.ActorData.AnimMovY = Mathf.Lerp(actor.ActorData.AnimMovY, 0f, 8f * Time.deltaTime);
+                actor.ActorData.AnimMovX = Mathf.Lerp(actor.ActorData.AnimMovX, 0f, 8f * Time.deltaTime);
             }
         }
 

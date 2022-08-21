@@ -62,7 +62,7 @@ MonoBehaviour:
   damage: 10
   debris: 1
   dust: 1
-  flash: 1
+  flash: 0
   Flash:
     intensityMin: 0.5
     intensityMax: 0.7

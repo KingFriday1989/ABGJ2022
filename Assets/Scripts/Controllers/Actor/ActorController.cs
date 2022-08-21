@@ -40,11 +40,12 @@ namespace DoubleAgent.Controllers.Actors
                     actor.ActorData.velocity = Converter.ChangeY(actor.ActorData.velocity, 0);
                 }
 
-                actor.ActorData.velocity = Converter.AddY(actor.ActorData.velocity, -9.81f * 2 * Time.fixedDeltaTime);
+                actor.ActorData.velocity = Converter.AddY(actor.ActorData.velocity, -9.81f * 2 * Time.deltaTime);
             }
 
             actor.ActorData.move = Vector3.ClampMagnitude(actor.ActorData.move, 1);
-            var movePos = actor.ActorData.move * actor.ActorData.Speed * Time.fixedDeltaTime + actor.ActorData.velocity * Time.fixedDeltaTime;
+            var movePos = actor.ActorData.move * actor.ActorData.Speed * Time.deltaTime + actor.ActorData.velocity * Time.deltaTime;
+            //var movePos = actor.ActorData.Speed * Time.deltaTime * actor.ActorData.move + actor.ActorData.velocity * Time.deltaTime;
             (actor as ActorPlayer).CharacterController.Move(movePos);
             RotateCharacter(transform, actor.ActorData.MouseTarget);
         }

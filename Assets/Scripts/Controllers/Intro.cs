@@ -1,4 +1,5 @@
 ﻿using Core;
+using DoubleAgent.Data;
 using Helpers.Audio;
 using System.Collections;
 using UnityEngine;
@@ -11,13 +12,14 @@ namespace DoubleAgent.Controllers
 
         private void Start()
         {
+            Constants.Init();
             SoundManager.PlayGlobalMusic(MusicStart);
             StartCoroutine(Init());    
         }
 
         IEnumerator Init()
         {
-            yield return new WaitForSeconds(9);
+            yield return new WaitForSeconds(8.25f);
             LoadScene(1); //Main Menu
         }
     }

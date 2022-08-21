@@ -54,6 +54,11 @@ namespace DoubleAgent.Controllers
             if (lastShot < Time.time)
             {
                 FireBullet();
+
+                //---------------------
+                actor.ActorData.gun.damage = 1;
+                actor.ActorData.gun.strength = 0;
+                //---------------------
                 lastShot = Time.time + 0.3f;
                 actor.ActorData.gun.Shoot();
                 actor.ActorAnimator.animator.SetLayerWeight(2, 1);

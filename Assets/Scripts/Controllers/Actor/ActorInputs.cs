@@ -12,10 +12,12 @@ namespace DoubleAgent.Controllers.Actors
         public WalkingDirections walkingDirection;
         
         private Actor actor;
-        
+        private bool running;
+
         private void Start()
         {
             actor = GetComponent<Actor>();
+            running = Random.value < 0.5f;
         }
         
         private void Update()
@@ -28,6 +30,10 @@ namespace DoubleAgent.Controllers.Actors
                 {
                     MouseInput();
                     ActorInput();
+                }
+                else
+                {
+                    actor.ActorData.Sprint = running;
                 }
                 WalkingDirection();
                 ActorAnim();

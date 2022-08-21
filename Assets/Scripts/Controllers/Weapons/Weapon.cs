@@ -17,23 +17,32 @@ public class Weapon : MonoBehaviour
     public Transform muzzlePt;
     public Actor actor;
 
+    private Transform aimPt;
+
     // Start is called before the first frame update
     void Start()
     {
         lastShot = Time.time;
+        aimPt = GameObject.FindGameObjectWithTag("Target").transform;
     }
 
+    void Update()
+    {
+        aimPt.position = actor.transform.position + actor.transform.forward * 50f + 1.5f * Vector3.up;
+    }
+    [ContextMenu("Shoot Gun")]
     public void Fire()
     {
         if (lastShot < Time.time)
         {
+            actor.ActorData.gun.Shoot();
             lastShot = Time.time + FireRt;
             SoundManager.PlaySoundOnChannel(gunshot, 1);
-            //Tie to Actor.transform.position
             Ray ray = new Ray(muzzlePt.position, actor.transform.forward + new Vector3(0,1,0));
             Physics.Raycast(ray, out RaycastHit hitinfo);
             if (hitDust != null && hitBld != null)
             {
+                
                 if (hitinfo.transform.GetComponent<Actor>())
                 {
                     //Damage Actor and spawn blood particle effect

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using RayFire;
 
 namespace Data.Actors
 {
@@ -43,8 +44,7 @@ namespace Data.Actors
         #region WEAPONS
         public Weapon pistol;
         public Weapon grenade;
-
-
+        public RayFire.RayfireGun gun;
         #endregion
     }
 }

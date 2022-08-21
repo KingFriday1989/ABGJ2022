@@ -63,7 +63,7 @@ namespace DoubleAgent.Controllers.Actors
 
         void AnimationState()
         {
-            bool isMoving = actor.ActorData.MovX != 0 || actor.ActorData.MovY != 0;
+            bool isMoving = actor.ActorData.IsPlayer ? actor.ActorData.MovX != 0 || actor.ActorData.MovY != 0 : actor.NavMeshAgent.steeringTarget.magnitude > 0;
             if (isMoving)
             {
                 if (/*GameData.State != GameState.InDialogue && */!actor.ActorAnimator.IsCurrentState<ActorState_Moving>())

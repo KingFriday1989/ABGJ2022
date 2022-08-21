@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2003757953
 RectTransform:
   m_ObjectHideFlags: 0
@@ -116,7 +116,19 @@ MonoBehaviour:
         m_CallState: 2
   OnCompletion:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: DoubleAgent.Controllers.GameController, TechSkullStudios.DoubleAgent
+        m_MethodName: StartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4531876910480358566
 GameObject:
   m_ObjectHideFlags: 0
@@ -493,12 +505,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+        m_TargetAssemblyTypeName: DoubleAgent.Controllers.GameController, TechSkullStudios.DoubleAgent
+        m_MethodName: FinishGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -623,7 +635,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actor: {fileID: 0}
   Score: {fileID: 4531876910780858481}
-  Grenades: {fileID: 4531876912505812194}
+  Grenades: {fileID: 4531876912451057212}
   GameTime: {fileID: 4531876912019458854}
   StartCountdownText: {fileID: 2811570219319473842}
 --- !u!1 &4531876911692837357

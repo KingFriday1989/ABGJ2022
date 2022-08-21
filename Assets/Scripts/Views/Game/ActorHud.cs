@@ -22,7 +22,9 @@ namespace DoubleAgent.Views.Game
         private void Update()
         {
             if(Score)
-                Score.text = GameData.Initialized ? GameData.Score.ToString() : "n/a";
+                Score.text = GameData.Score.ToString();
+            if (Grenades)
+                Grenades.text = actor.ActorData.weapon.grenNum.ToString();
         }
 
         public void StartCountdown(float t)

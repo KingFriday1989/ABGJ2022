@@ -438,7 +438,7 @@ MonoBehaviour:
   MouseTarget: {x: 0, y: 0, z: 0}
   MovX: 0
   MovY: 0
-  Speed: 1.25
+  Speed: 3
   moveForward: 0
   moveBackward: 0
   moveStepLeft: 0

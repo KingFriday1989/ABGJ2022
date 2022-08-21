@@ -58,7 +58,7 @@ namespace DoubleAgent.Controllers
 
                 //---------------------
                 actor.ActorData.gun.damage = 10;
-                actor.ActorData.gun.strength = 3;
+                actor.ActorData.gun.strength = 0;
                 //---------------------
                 lastShot = Time.time + 0.3f;
                 actor.ActorData.gun.Shoot();

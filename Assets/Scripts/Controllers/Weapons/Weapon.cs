@@ -41,7 +41,7 @@ namespace DoubleAgent.Controllers
             {
                 actor.ActorData.gun.Shoot();
                 actor.ActorAnimator.animator.SetLayerWeight(2, 1);
-                actor.ActorAnimator.animator.Play("FireWeapon", 2);
+                actor.ActorAnimator.animator.SetTrigger("Fire");
                 StopCoroutine(LayerDelay(0.5f));
                 StartCoroutine(LayerDelay(0.5f));
 

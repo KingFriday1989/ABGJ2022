@@ -48,7 +48,7 @@ namespace DoubleAgent.Controllers.Actors
             actor.ActorData.move = Vector3.ClampMagnitude(actor.ActorData.move, 1);
             var movePos = actor.ActorData.move * actor.ActorData.Speed * Time.fixedDeltaTime + actor.ActorData.velocity * Time.fixedDeltaTime;
             (actor as ActorPlayer).CharacterController.Move(movePos);
-            //RotateCharacter();
+            RotateCharacter();
         }
         
         void AnimationState()

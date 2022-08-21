@@ -23,6 +23,8 @@ namespace DoubleAgent.Views.Game
         {
             if(Score)
                 Score.text = GameData.Score.ToString();
+            if (Grenades)
+                Grenades.text = actor.ActorData.weapon.grenNum.ToString();
         }
 
         public void StartCountdown(float t)

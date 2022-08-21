@@ -11,7 +11,7 @@ namespace DoubleAgent.Data.Actors
         [Header("General")]
         #region GENERAL
         public bool IsPlayer;
-        public NavMeshAgent NavMeshAgent;
+        //public NavMeshAgent NavMeshAgent;
         public List<Renderer> Renderers;
         public Transform ItemR;
         public Transform ItemL;
@@ -32,8 +32,8 @@ namespace DoubleAgent.Data.Actors
         public Vector3 move;
         public Vector3 velocity;
         #endregion
-
-        #region Animation
+        [Space(10), Header("Animation")]
+        #region ANIMATION
         public bool forward;
         public bool backward;
         public bool stepLeft;
@@ -41,7 +41,7 @@ namespace DoubleAgent.Data.Actors
         public float AnimMovX;
         public float AnimMovY;
         #endregion
-
+        [Space(10), Header("Weapons")]
         #region WEAPONS
         public Weapon weapon;
         public GameObject bombPrefab;

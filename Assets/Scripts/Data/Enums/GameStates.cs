@@ -2,7 +2,9 @@
 {
     public enum GameStates
     {
-        Walking,
+        MainMenu,
+        Intro,
+        GameRunning,
         Driving
     }
 }

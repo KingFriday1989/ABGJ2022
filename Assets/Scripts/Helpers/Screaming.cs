@@ -1,4 +1,5 @@
 using Data.Utility.Lists;
+using DoubleAgent.Data;
 using Editor;
 using Helpers;
 using Helpers.Extensions;
@@ -42,6 +43,7 @@ namespace DoubleAgent.Helpers
 
         private bool Verify(Collider other)
         {
+            if (GameData.State != GameStates.GameRunning) return false;
             if(screams == null) return false;
             return other.CompareTag(ScreamNear);
         }

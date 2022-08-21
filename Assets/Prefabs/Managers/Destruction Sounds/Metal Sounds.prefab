@@ -9,6 +9,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 518882764680757792, guid: 0843fcc0860bb78428f7b0280875a1df,
         type: 3}
+      propertyPath: Sounds
+      value: 
+      objectReference: {fileID: 11400000, guid: 90359c333b5b3be4cab38f965ccf56c5,
+        type: 2}
+    - target: {fileID: 518882764680757792, guid: 0843fcc0860bb78428f7b0280875a1df,
+        type: 3}
       propertyPath: Channel
       value: 6
       objectReference: {fileID: 0}
@@ -19,6 +25,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 518882764878337480, guid: 0843fcc0860bb78428f7b0280875a1df,
         type: 3}
+      propertyPath: Sounds
+      value: 
+      objectReference: {fileID: 11400000, guid: 90359c333b5b3be4cab38f965ccf56c5,
+        type: 2}
+    - target: {fileID: 518882764878337480, guid: 0843fcc0860bb78428f7b0280875a1df,
+        type: 3}
       propertyPath: Channel
       value: 9
       objectReference: {fileID: 0}
@@ -26,6 +38,21 @@ PrefabInstance:
         type: 3}
       propertyPath: Sounds.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 518882765661781763, guid: 0843fcc0860bb78428f7b0280875a1df,
+        type: 3}
+      propertyPath: Action.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 518882765661781763, guid: 0843fcc0860bb78428f7b0280875a1df,
+        type: 3}
+      propertyPath: Action.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 518882765661781763, guid: 0843fcc0860bb78428f7b0280875a1df,
+        type: 3}
+      propertyPath: Action.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 518882765661781769, guid: 0843fcc0860bb78428f7b0280875a1df,
         type: 3}
@@ -94,6 +121,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 518882765943442142, guid: 0843fcc0860bb78428f7b0280875a1df,
         type: 3}
+      propertyPath: Sounds
+      value: 
+      objectReference: {fileID: 11400000, guid: 90359c333b5b3be4cab38f965ccf56c5,
+        type: 2}
+    - target: {fileID: 518882765943442142, guid: 0843fcc0860bb78428f7b0280875a1df,
+        type: 3}
       propertyPath: Channel
       value: 7
       objectReference: {fileID: 0}
@@ -102,6 +135,12 @@ PrefabInstance:
       propertyPath: Sounds.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 518882766149611624, guid: 0843fcc0860bb78428f7b0280875a1df,
+        type: 3}
+      propertyPath: Sounds
+      value: 
+      objectReference: {fileID: 11400000, guid: 90359c333b5b3be4cab38f965ccf56c5,
+        type: 2}
     - target: {fileID: 518882766149611624, guid: 0843fcc0860bb78428f7b0280875a1df,
         type: 3}
       propertyPath: Channel

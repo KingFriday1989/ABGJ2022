@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62a61c7523ae1284dba4d5f9bd793333, type: 3}
+  m_Name: Metal Destruction Sounds
+  m_EditorClassIdentifier: 
+  List:
+  - {fileID: 8300000, guid: 50abad556c5f3c84eb9bf019cbf6da80, type: 3}
+  - {fileID: 8300000, guid: 0c469ab818b8d7c4eba4c744b00eb92f, type: 3}

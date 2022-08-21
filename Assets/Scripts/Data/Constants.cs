@@ -14,6 +14,9 @@ namespace DoubleAgent.Data
         #endregion
 
         #region TAGS
+        public const string TAG_GROUND = "Ground";
+        public const string TAG_TARGET = "Target";
+        public const string TAG_PARTICLES = "Particles";
         #endregion
 
         #region LAYERS

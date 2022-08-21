@@ -22,6 +22,7 @@ namespace DoubleAgent.Controllers
 
         private async void Start()
         {
+            GameData.State = GameStates.MainMenu;
             //SoundManager.PlayMusicOnChannel(StartMusic, 0);
             //SoundManager.SetMusicVolumeOnChannel(0.3f, 0);
             //SoundManager.SetVolume(0.3f);
@@ -47,6 +48,7 @@ namespace DoubleAgent.Controllers
             ShowLoadingScreen();
             await Timer.WaitForSeconds(1.5f);
             await Timer.WaitForFrame();
+            GameData.State = GameStates.Intro;
             await LoadScene(2);
         }
     }

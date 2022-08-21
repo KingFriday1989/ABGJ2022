@@ -41,13 +41,13 @@ namespace DoubleAgent.Controllers.States.Actors
         #region Debug
         [Header("Debugging")]
 
-        [InspectorButton("SetIdle", ButtonWidth = 200)]
-        [SerializeField] private bool m_SetIdle;
+        [InspectorButton("SetIdle")]
+        [SerializeField] bool m_SetIdle;
         [ContextMenu("Idle")]
         private void SetIdle() => SetState<ActorState_Idle>();
 
-        [InspectorButton("SetMoving", ButtonWidth = 200)]
-        [SerializeField] private bool m_SetWalking;
+        [InspectorButton("SetMoving")]
+        [SerializeField] bool m_SetWalking;
         [ContextMenu("Moving")]
         private void SetMoving() => SetState<ActorState_Moving>();
         #endregion

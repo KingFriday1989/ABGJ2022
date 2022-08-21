@@ -45,6 +45,7 @@ namespace DoubleAgent.Controllers
         {
             MenuCanvas.enabled = false;
             ShowLoadingScreen();
+            await Timer.WaitForSeconds(1.5f);
             await Timer.WaitForFrame();
             await LoadScene(2);
         }

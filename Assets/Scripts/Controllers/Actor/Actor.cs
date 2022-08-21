@@ -5,6 +5,7 @@ using UnityEngine;
 
 namespace DoubleAgent.Controllers.Actors
 {
+    //[RequireComponent(typeof(ActorData)]
     public abstract class Actor : Core.Behaviour
     {
         public ActorData ActorData;

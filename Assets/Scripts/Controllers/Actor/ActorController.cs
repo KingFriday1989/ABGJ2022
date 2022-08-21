@@ -1,12 +1,11 @@
 using DoubleAgent.Controllers.States.Actors;
 using Helpers;
-using UnityEngine;
-using Helpers;
 using RayFire;
+using UnityEngine;
 
 namespace DoubleAgent.Controllers.Actors
 {
-    public class ActorController : MonoBehaviour
+    public class ActorController : Core.Behaviour
     {
         public Actor actor;
 

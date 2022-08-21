@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62a61c7523ae1284dba4d5f9bd793333, type: 3}
+  m_Name: Man Screams
+  m_EditorClassIdentifier: 
+  List:
+  - {fileID: 8300000, guid: 26e669e1e3c3e644fbf47c45453274b4, type: 3}
+  - {fileID: 8300000, guid: 2d3cf03cbf729e14d99271c9b30e6a5e, type: 3}
+  - {fileID: 8300000, guid: 529231836f556c7489e23f09602ca51c, type: 3}
+  - {fileID: 8300000, guid: 13b90c03c6b14db4eaf84d1e1a52f5e4, type: 3}
+  - {fileID: 8300000, guid: 3f438b2a3d77a7b47aaaed5cf9eebd54, type: 3}
+  - {fileID: 8300000, guid: c055cdada0ce01c4a8d02fd629805cc6, type: 3}
+  - {fileID: 8300000, guid: b0e59ff4042b569459fada1b4c0975ae, type: 3}
+  - {fileID: 8300000, guid: 631d4f456fe562643acf119d5e4c0ce8, type: 3}
+  - {fileID: 8300000, guid: 27593833f499d9345839d3842ff42fa1, type: 3}

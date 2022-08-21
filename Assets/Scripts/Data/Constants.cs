@@ -5,8 +5,12 @@ namespace DoubleAgent.Data
     public sealed class Constants : ConstantsBase<Constants>
     {
         public const float Gravity = -9.81f;
+        public const int GameTime = 5;
 
         #region SCENES
+
+        public const string SCENE_CREDITS = "Credits";
+
         #endregion
 
         #region TAGS

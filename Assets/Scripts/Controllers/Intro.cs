@@ -1,4 +1,5 @@
 ﻿using Core;
+using Helpers.Audio;
 using System.Collections;
 using UnityEngine;
 
@@ -6,8 +7,11 @@ namespace DoubleAgent.Controllers
 {
     public sealed class Intro : Scene<Intro>
     {
+        [SerializeField] private AudioClip MusicStart;
+
         private void Start()
         {
+            SoundManager.PlayGlobalMusic(MusicStart);
             StartCoroutine(Init());    
         }
 

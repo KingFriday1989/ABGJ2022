@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &9039535595300404936
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4915893488196431497, guid: 16b952eeeeb0d6d4395a053fc555694e,
+        type: 3}
+      propertyPath: screams
+      value: 
+      objectReference: {fileID: 11400000, guid: 1b4f1272e2466c041949db9cf882ff9e,
+        type: 2}
+    - target: {fileID: 4915893488196431499, guid: 16b952eeeeb0d6d4395a053fc555694e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915893488196431499, guid: 16b952eeeeb0d6d4395a053fc555694e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915893488196431499, guid: 16b952eeeeb0d6d4395a053fc555694e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915893488196431499, guid: 16b952eeeeb0d6d4395a053fc555694e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915893488196431510, guid: 16b952eeeeb0d6d4395a053fc555694e,
+        type: 3}
+      propertyPath: m_Name
+      value: Male Screams
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 16b952eeeeb0d6d4395a053fc555694e, type: 3}

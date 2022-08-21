@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 388f525c33cc5864b8fc02e81ac6941c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Seconds: 0.5
+  Seconds: 2
   Repeating: 0
   Action:
     m_PersistentCalls:
@@ -264,3 +264,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _LoadingScreen: {fileID: 7825460352073788730, guid: c8971ddaa612071448c36477636e7d30,
     type: 3}
+  GameTimer: {fileID: 0}
+  StartInfo: {fileID: 0}

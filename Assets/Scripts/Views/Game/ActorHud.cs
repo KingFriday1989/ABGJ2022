@@ -1,24 +1,35 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using TMPro;
 using DoubleAgent.Data;
 using DoubleAgent.Controllers.Actors;
+using TMPro;
+using UnityEngine;
 
-public class ActorHud : MonoBehaviour
+namespace DoubleAgent.Views.Game
 {
-    public Actor actor;
-    public TMP_Text Score;
-    public TMP_Text Grenades;
-    public TMP_Text GameTime;
-
-    private void Start()
+    public sealed class ActorHud : Core.Behaviour
     {
-        Grenades.text = actor.ActorData.weapon.grenNum.ToString();
-    }
+        [SerializeField] private Actor actor;
+        [SerializeField] private TMP_Text Score;
+        [SerializeField] private TMP_Text Grenades;
+        [SerializeField] private TMP_Text GameTime;
+        [SerializeField] private TMP_Text StartCountdownText;
 
-    private void Update()
-    {
-        Score.text =  GameData.Score.ToString();
+        private void Start()
+        {
+            if(Grenades)
+                Grenades.text = actor.ActorData.weapon.grenNum.ToString();
+        }
+
+        private void Update()
+        {
+            if(Score)
+                Score.text = GameData.Score.ToString();
+        }
+
+        public void StartCountdown(float t)
+        {
+            int time = (int)t;
+            if(StartCountdownText)
+                StartCountdownText.text = $"Game Starts In: {time} second{(time > 1 ? "s" : "")}";
+        }
     }
 }

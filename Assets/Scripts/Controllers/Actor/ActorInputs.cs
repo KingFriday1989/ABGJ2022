@@ -1,6 +1,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using DoubleAgent.Helpers;
+using DoubleAgent.Data;
+using Helpers.Extensions;
 
 
 namespace DoubleAgent.Controllers.Actors
@@ -8,6 +11,7 @@ namespace DoubleAgent.Controllers.Actors
     public class ActorInputs : MonoBehaviour
     {
         public Actor actor;
+        public WalkingDirections walkingDirection;
         
         private void Start()
         {
@@ -20,6 +24,7 @@ namespace DoubleAgent.Controllers.Actors
             if (actor.ActorData.IsPlayer)
                 ActorInput();
 
+            WalkingDireaction();
             ActorAnim();
             MovementFloats();
         }
@@ -63,12 +68,12 @@ namespace DoubleAgent.Controllers.Actors
             //Fire Pistol
             if (Input.GetKey(KeyCode.Mouse0))
             {
-                actor.ActorData.pistol.Fire();
+                actor.ActorData.weapon.Fire();
             }
             //Throw Grenade
             if (Input.GetKey(KeyCode.Mouse1))
             {
-                actor.ActorData.grenade.Fire();
+                actor.ActorData.weapon.TossGrenade();
             }
 
             if (Input.GetKey(KeyCode.LeftShift))
@@ -78,8 +83,33 @@ namespace DoubleAgent.Controllers.Actors
 
         }
 
+
+        void WalkingDireaction()
+        {
+            var YRot = transform.rotation.eulerAngles.y;
+            var Y = Mathf.Abs(YRot) <= 45 || Mathf.Abs(YRot) >= 135 ? 1:0;
+            var XRot = Mathf.Abs(YRot).IsBetween(45,135) ? 1:0;
+
+            if(XRot == 1 & YRot < 0)
+            {
+                XRot = -1;
+            }
+
+            if(Y == 1 && Mathf.Abs(YRot) >= 135)
+            {
+                Y = -1;
+            }
+
+            walkingDirection = Algorithms.GetWalkingDirection((actor.ActorData.moveStepRight) ? 1 : (actor.ActorData.moveStepLeft) ? -1 : 0, (actor.ActorData.moveForward) ? 1 : (actor.ActorData.moveBackward) ? -1 : 0, XRot, Y);
+        }
         void ActorAnim()
         {
+            actor.ActorData.forward = walkingDirection == WalkingDirections.WalkForward;
+            actor.ActorData.backward = walkingDirection == WalkingDirections.WalkBackward;
+            actor.ActorData.stepLeft = walkingDirection == WalkingDirections.WalkLeft;
+            actor.ActorData.stepRight = walkingDirection == WalkingDirections.WalkRight;
+
+            return;
             if (actor)
             {
                 var verticalMovement = Vector3.SignedAngle(actor.ActorData.MouseTarget - transform.position, transform.forward, Vector3.up);
@@ -224,8 +254,6 @@ namespace DoubleAgent.Controllers.Actors
                 actor.ActorData.stepRight = false;
             }
         }
-        
-
         void MovementFloats()
         {
             actor.ActorData.MovY = Mathf.Lerp(actor.ActorData.MovY, (actor.ActorData.moveForward) ? 1f : (actor.ActorData.moveBackward) ? -1f : 0f, 2f * Time.fixedDeltaTime);
@@ -243,7 +271,7 @@ namespace DoubleAgent.Controllers.Actors
                 actor.ActorData.AnimMovX = Mathf.Lerp(actor.ActorData.AnimMovX, 0f, 8f * Time.fixedDeltaTime);
             }
 
-            actor.ActorData.Speed = Mathf.Lerp(actor.ActorData.Speed,(actor.ActorData.Sprint) ? 1.5f : 1f, 2f * Time.deltaTime);
+            actor.ActorData.Speed = Mathf.Lerp(actor.ActorData.Speed,actor.ActorData.Sprint ? 2f : 1.25f, 8f * Time.deltaTime);
 
             if (actor.ActorData.MovX > 0.99f)
                 actor.ActorData.MovX = 1f;
@@ -259,10 +287,10 @@ namespace DoubleAgent.Controllers.Actors
             else if (actor.ActorData.MovY < 0.01f && actor.ActorData.MovY > -0.01f)
                 actor.ActorData.MovY = 0f;
 
-            if (actor.ActorData.Speed > 1.49f)
-                actor.ActorData.Speed = 1.5f;
-            else if (actor.ActorData.Speed < 1.01f)
-                actor.ActorData.Speed = 1f;
+            if (actor.ActorData.Speed > 1.99f)
+                actor.ActorData.Speed = 2f;
+            else if (actor.ActorData.Speed < 1.26f)
+                actor.ActorData.Speed = 1.25f;
 
             //var mov = Mathf.Max(Mathf.Abs(actor.ActorData.MovY), Mathf.Abs(actor.ActorData.MovX));
             //actor.ActorData.Mov = mov;

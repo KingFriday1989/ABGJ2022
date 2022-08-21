@@ -16,6 +16,7 @@ namespace DoubleAgent.Controllers
         private void Start()
         {
             Constants.Init();
+            SoundManager.PlayGlobalMusic(MusicStart);
             StartCoroutine(Init());    
         }
 

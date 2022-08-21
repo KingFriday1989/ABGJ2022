@@ -39,7 +39,6 @@ namespace DoubleAgent.Controllers.Actors
                 actor.ActorData.MouseTarget = hitInfo.point;
             }
         }
-
         void ActorInput()
         {
             if (Input.GetKey(KeyCode.W))
@@ -82,8 +81,6 @@ namespace DoubleAgent.Controllers.Actors
                 actor.ActorData.Sprint = false;
 
         }
-
-
         void WalkingDireaction()
         {
             var YRot = transform.rotation.eulerAngles.y;
@@ -108,158 +105,13 @@ namespace DoubleAgent.Controllers.Actors
             actor.ActorData.backward = walkingDirection == WalkingDirections.WalkBackward;
             actor.ActorData.stepLeft = walkingDirection == WalkingDirections.WalkLeft;
             actor.ActorData.stepRight = walkingDirection == WalkingDirections.WalkRight;
-
-            return;
-            if (actor)
-            {
-                var verticalMovement = Vector3.SignedAngle(actor.ActorData.MouseTarget - transform.position, transform.forward, Vector3.up);
-                var horizontalMovement = Vector3.SignedAngle(actor.ActorData.MouseTarget - transform.position, transform.right, Vector3.up);
-                var actorData = actor.ActorData;
-                //forward
-                if (verticalMovement < 45 && verticalMovement >= 0 || verticalMovement > -45 && verticalMovement <= 0)
-                {
-                    if (actorData.moveForward)
-                    {
-                        actor.ActorData.forward = true;
-                        actor.ActorData.backward = false;
-                        actor.ActorData.stepLeft = false;
-                        actor.ActorData.stepRight = false;
-                    }
-                    else if (actorData.moveBackward)
-                    {
-                        actor.ActorData.forward = false;
-                        actor.ActorData.backward = true;
-                        actor.ActorData.stepLeft = false;
-                        actor.ActorData.stepRight = false;
-                    }
-                    else if (actorData.moveStepLeft)
-                    {
-                        actor.ActorData.forward = false;
-                        actor.ActorData.backward = false;
-                        actor.ActorData.stepLeft = true;
-                        actor.ActorData.stepRight = false;
-                    }
-                    else if (actorData.moveStepRight)
-                    {
-                        actor.ActorData.forward = false;
-                        actor.ActorData.backward = false;
-                        actor.ActorData.stepLeft = false;
-                        actor.ActorData.stepRight = true;
-                    }
-                }
-                //backward
-                else if (verticalMovement > 135 && verticalMovement <= 180 || verticalMovement < -135 && verticalMovement >= -180)
-                {
-                    if (actorData.moveForward)
-                    {
-                        actor.ActorData.forward = false;
-                        actor.ActorData.backward = true;
-                        actor.ActorData.stepLeft = false;
-                        actor.ActorData.stepRight = false;
-                    }
-                    else if (actorData.moveBackward)
-                    {
-                        actor.ActorData.backward = true;
-                        actor.ActorData.forward = false;
-                        actor.ActorData.stepLeft = false;
-                        actor.ActorData.stepRight = false;
-                    }
-                    else if (actorData.moveStepLeft)
-                    {
-                        actor.ActorData.forward = false;
-                        actor.ActorData.backward = false;
-                        actor.ActorData.stepLeft = false;
-                        actor.ActorData.stepRight = true;
-                    }
-                    else if (actorData.moveStepRight)
-                    {
-                        actor.ActorData.forward = false;
-                        actor.ActorData.backward = false;
-                        actor.ActorData.stepLeft = true;
-                        actor.ActorData.stepRight = false;
-                    }
-                }
-
-                //left
-                if (horizontalMovement < 45 && horizontalMovement >= 0 || horizontalMovement > -45 && horizontalMovement <= 0)
-                {
-                    if (actorData.moveForward)
-                    {
-                        actor.ActorData.forward = false;
-                        actor.ActorData.backward = false;
-                        actor.ActorData.stepLeft = false;
-                        actor.ActorData.stepRight = true;
-                    }
-                    else if (actorData.moveBackward)
-                    {
-                        actor.ActorData.forward = false;
-                        actor.ActorData.backward = false;
-                        actor.ActorData.stepLeft = true;
-                        actor.ActorData.stepRight = false;
-
-                    }
-                    else if (actorData.moveStepLeft)
-                    {
-                        actor.ActorData.forward = true;
-                        actor.ActorData.backward = false;
-                        actor.ActorData.stepLeft = false;
-                        actor.ActorData.stepRight = false;
-                    }
-                    else if (actorData.moveStepRight)
-                    {
-                        actor.ActorData.forward = false;
-                        actor.ActorData.backward = true;
-                        actor.ActorData.stepLeft = false;
-                        actor.ActorData.stepRight = false;
-                    }
-                }
-                //right
-                else if (horizontalMovement > 135 && horizontalMovement <= 180 || horizontalMovement < -135 && horizontalMovement >= -180)
-                {
-                    if (actorData.moveForward)
-                    {
-                        actor.ActorData.forward = false;
-                        actor.ActorData.backward = false;
-                        actor.ActorData.stepLeft = true;
-                        actor.ActorData.stepRight = false;
-                    }
-                    else if (actorData.moveBackward)
-                    {
-                        actor.ActorData.forward = false;
-                        actor.ActorData.backward = false;
-                        actor.ActorData.stepLeft = false;
-                        actor.ActorData.stepRight = true;
-                    }
-                    else if (actorData.moveStepLeft)
-                    {
-                        actor.ActorData.forward = false;
-                        actor.ActorData.backward = true;
-                        actor.ActorData.stepLeft = false;
-                        actor.ActorData.stepRight = false;
-                    }
-                    else if (actorData.moveStepRight)
-                    {
-                        actor.ActorData.forward = true;
-                        actor.ActorData.backward = false;
-                        actor.ActorData.stepLeft = false;
-                        actor.ActorData.stepRight = false;
-                    }
-                }
-            }
-            else
-            {
-                actor.ActorData.forward = false;
-                actor.ActorData.backward = false;
-                actor.ActorData.stepLeft = false;
-                actor.ActorData.stepRight = false;
-            }
         }
         void MovementFloats()
         {
             actor.ActorData.MovY = Mathf.Lerp(actor.ActorData.MovY, (actor.ActorData.moveForward) ? 1f : (actor.ActorData.moveBackward) ? -1f : 0f, 2f * Time.fixedDeltaTime);
             actor.ActorData.MovX = Mathf.Lerp(actor.ActorData.MovX, (actor.ActorData.moveStepRight) ? 1f : (actor.ActorData.moveStepLeft) ? -1f : 0f, 2f * Time.fixedDeltaTime);
 
-            if(actor.ActorData.move.magnitude > 0.1f)
+            if(actor.ActorData.IsPlayer & actor.ActorData.move.magnitude > 0.1f || !actor.ActorData.IsPlayer & Vector3.Magnitude(actor.NavMeshAgent.steeringTarget) > 0)
             {
 
                 actor.ActorData.AnimMovY = Mathf.Lerp(actor.ActorData.AnimMovY, (actor.ActorData.forward) ? 1f : (actor.ActorData.backward) ? -1f : 0f, 8f * Time.fixedDeltaTime);

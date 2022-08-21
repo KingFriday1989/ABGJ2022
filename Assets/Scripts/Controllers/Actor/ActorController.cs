@@ -21,7 +21,6 @@ namespace DoubleAgent.Controllers.Actors
             if (actor.ActorData.IsPlayer)
                 DoMovePlayer();
 
-            //ActorAnim();
             AnimationState();
         }
 
@@ -51,7 +50,18 @@ namespace DoubleAgent.Controllers.Actors
             (actor as ActorPlayer).CharacterController.Move(movePos);
             RotateCharacter();
         }
-        
+        void RotateCharacter()
+        {
+            var target = actor.ActorData.MouseTarget;
+            var lerp = Vector3.Slerp(transform.forward, target - transform.position, Time.deltaTime * 8);
+            transform.forward = lerp;
+
+            var euler = transform.rotation.eulerAngles;
+            euler.x = 0;
+            euler.z = 0;
+            transform.rotation = Quaternion.Euler(euler);
+        }
+
         void AnimationState()
         {
             bool isMoving = actor.ActorData.MovX != 0 || actor.ActorData.MovY != 0;
@@ -67,19 +77,7 @@ namespace DoubleAgent.Controllers.Actors
                 actor.ActorAnimator.ReturnToDefaultState();
             }
         }
-
-        void RotateCharacter()
-        {
-            var target = actor.ActorData.MouseTarget;
-            var lerp = Vector3.Slerp(transform.forward, target - transform.position, Time.deltaTime * 8);
-            transform.forward = lerp;
-
-            var euler = transform.rotation.eulerAngles;
-            euler.x = 0;
-            euler.z = 0;
-            transform.rotation = Quaternion.Euler(euler);
-        }
-
+        
         public void DisableDynamite()
         {
             actor.ActorData.ItemL.gameObject.SetActive(false);

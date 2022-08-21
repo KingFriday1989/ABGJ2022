@@ -1,6 +1,8 @@
 using DoubleAgent.Controllers.Actors;
 using DoubleAgent.Data;
+using Editor;
 using Helpers.Audio;
+using Helpers.Extensions;
 using System.Collections;
 using UnityEngine;
 
@@ -40,6 +42,7 @@ namespace DoubleAgent.Controllers
         {
             if (lastShot < Time.time)
             {
+                FireBullet();
                 actor.ActorData.gun.Shoot();
                 actor.ActorAnimator.animator.SetLayerWeight(2, 1);
                 actor.ActorAnimator.animator.SetTrigger("Fire");
@@ -82,6 +85,18 @@ namespace DoubleAgent.Controllers
         {
             yield return new WaitForSeconds(time);
             actor.ActorAnimator.animator.SetLayerWeight(2, 0);
+        }
+
+        [InspectorButton("FireBullet")]
+        [SerializeField] bool m_FireBullet;
+
+        [ContextMenu("Fire Bullet")]
+        public void FireBullet()
+        {
+            if (bullet == null) return;
+            var bulletInstance = Instantiate(bullet, transform);
+            bulletInstance.UnParent();
+            bulletInstance.AddForce(1000 * Vector3.forward);
         }
     }
 }

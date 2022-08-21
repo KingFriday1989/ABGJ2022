@@ -121,7 +121,7 @@ MonoBehaviour:
     centerBias: 0
   splinters:
     axis: 1
-    amount: 30
+    amount: 50
     strength: 0.7
     centerBias: 0
   slabs:

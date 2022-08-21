@@ -255,18 +255,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9054d99dddd2d544a0e3b053211f7bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FireRt: 0
   lastShot: 0
+  lastThrow: 0
+  lastAdd: 0
   grenCool: 0
   gunshot: {fileID: 0}
   drawWeapon: {fileID: 0}
+  grenadeAdd: {fileID: 0}
   hitBld: {fileID: 0}
   hitDust: {fileID: 0}
   grenade: {fileID: 0}
   grenNum: 0
-  grenMax: 0
   muzzlePt: {fileID: 5262616380912833371}
   actor: {fileID: 6289061578790208378}
+  bullet: {fileID: 7081886901126517445, guid: f099e3641add5384fb0655a16bc6d91b, type: 3}
+  m_FireBullet: 0
 --- !u!4 &5262616380912833371 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400004, guid: 005aab8158014df47a1847978384b018,
@@ -429,7 +432,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsPlayer: 1
-  NavMeshAgent: {fileID: 7644741266560925752}
   Renderers: []
   ItemR: {fileID: 5486921660686864364}
   ItemL: {fileID: 5492768490497902172}
@@ -489,7 +491,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 219cae3788308e444a81d17c956756a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actor: {fileID: 6289061578790208378}
   walkingDirection: 0
 --- !u!4 &5492768490497902172 stripped
 Transform:

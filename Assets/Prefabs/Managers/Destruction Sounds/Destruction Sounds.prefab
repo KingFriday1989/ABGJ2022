@@ -166,6 +166,7 @@ GameObject:
   - component: {fileID: 518882765661781768}
   - component: {fileID: 518882765661781763}
   - component: {fileID: 4139115069319654105}
+  - component: {fileID: 5178535883939502559}
   m_Layer: 0
   m_Name: Destruction Sounds
   m_TagString: Untagged
@@ -206,7 +207,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _OnActivation:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5178535883939502559}
+        m_TargetAssemblyTypeName: DoubleAgent.Controllers.Game.ScoreManager, TechSkullStudios.DoubleAgent
+        m_MethodName: AddScore
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _OnDemolition:
     m_PersistentCalls:
       m_Calls:
@@ -452,6 +465,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _CallbackAction: 2
+--- !u!114 &5178535883939502559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 518882765661781770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc980c21d32d1784baa7b53c8d53c9b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &518882765943442112
 GameObject:
   m_ObjectHideFlags: 0

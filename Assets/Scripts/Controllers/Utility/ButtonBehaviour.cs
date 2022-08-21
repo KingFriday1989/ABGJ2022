@@ -1,5 +1,4 @@
 using Controllers.Utility;
-using Helpers;
 using Helpers.Audio;
 using Helpers.Extensions;
 using UnityEngine;
@@ -19,30 +18,26 @@ namespace DoubleAgent.Controllers.Utility
             button.OrNull(GetComponent<Button>()).interactable = IsEnabled;
         }
 
-        public void OnPointerEnter(PointerEventData eventData)
+        protected override void OnHover()
         {
-            if (!IsEnabled || !button.interactable) return;
             LeanTween.scale(gameObject, 1.2f * Vector3.one, 0.5f).setEaseSpring();
             SoundManager.PlaySoundOnChannel(HoverSound, Channel);
         }
 
-        public void OnPointerExit(PointerEventData eventData)
+        protected override void OnUnHover()
         {
-            if (!IsEnabled || !button.interactable) return;
             LeanTween.scale(gameObject, Vector3.one, 0.5f).setEaseSpring();
         }
 
         protected override void OnClick()
         {
-            if (!IsEnabled || !button.interactable) return;
             SoundManager.PlaySoundOnChannel(ClickSound, Channel + 1);
         }
 
-        public async void PlayGame()
+        public void PlayGame()
         {
-            MainMenu.Instance().ShowLoadingScreen();
-            await Timer.WaitForFrame();
-            await MainMenu.Instance().LoadScene(2);
+            if (!Enabled) return;
+            MainMenu.Instance().LoadGame();
         }
     }
 }

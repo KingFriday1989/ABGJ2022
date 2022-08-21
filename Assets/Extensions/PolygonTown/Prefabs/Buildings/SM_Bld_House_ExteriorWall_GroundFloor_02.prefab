@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b55d9bb3ec909340848c72a5bfc0ad0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 1
+  type: 0
   voronoi:
     amount: 10
     centerBias: 0
@@ -269,7 +269,7 @@ MonoBehaviour:
   demolitionType: 1
   physics:
     materialType: 9
-    material: {fileID: 0}
+    material: {fileID: 13400000, guid: 3aeb7dadc0c69d54d9e5777e9d5631f1, type: 2}
     massBy: 0
     mass: 1
     colliderType: 0
@@ -300,7 +300,7 @@ MonoBehaviour:
     layer: 
     connect: {fileID: 0}
   limitations:
-    byCollision: 1
+    byCollision: 0
     solidity: 0.1
     tag: Untagged
     depth: 1
@@ -399,7 +399,7 @@ MonoBehaviour:
     needNewMat: 0
   damage:
     enable: 1
-    maxDamage: 10
+    maxDamage: 15
     currentDamage: 0
     collect: 0
     multiplier: 1

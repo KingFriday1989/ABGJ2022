@@ -51,13 +51,14 @@ namespace DoubleAgent.Controllers
         [ContextMenu("Shoot Gun")]
         public void Fire()
         {
+            if (GameData.State != GameStates.GameRunning) return;
             if (lastShot < Time.time)
             {
                 FireBullet();
 
                 //---------------------
-                actor.ActorData.gun.damage = 1;
-                actor.ActorData.gun.strength = 0;
+                actor.ActorData.gun.damage = 10;
+                actor.ActorData.gun.strength = 3;
                 //---------------------
                 lastShot = Time.time + 0.3f;
                 actor.ActorData.gun.Shoot();

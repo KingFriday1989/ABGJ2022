@@ -22,23 +22,19 @@ namespace DoubleAgent.Controllers.Actors
         
         private void Update()
         {
-            if (GameData.Initialized & GameData.State != GameStates.GameRunning) 
-                return;
+            if (GameData.State != GameStates.GameRunning) return;
+            if (actor.ActorData.IsPlayer)
+            {
+                MouseInput();
+                ActorInput();
+            }
             else
             {
-                if (actor.ActorData.IsPlayer)
-                {
-                    MouseInput();
-                    ActorInput();
-                }
-                else
-                {
-                    actor.ActorData.Sprint = running;
-                }
-                WalkingDirection();
-                ActorAnim();
-                MovementFloats();
+                actor.ActorData.Sprint = running;
             }
+            WalkingDirection();
+            ActorAnim();
+            MovementFloats();
         }
 
         void MouseInput()

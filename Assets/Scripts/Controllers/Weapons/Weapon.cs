@@ -1,6 +1,8 @@
 using DoubleAgent.Controllers.Actors;
 using DoubleAgent.Data;
+using Editor;
 using Helpers.Audio;
+using Helpers.Extensions;
 using System.Collections;
 using UnityEngine;
 
@@ -20,6 +22,7 @@ namespace DoubleAgent.Controllers
 
         public Transform muzzlePt;
         public Actor actor;
+        public Rigidbody bullet;
 
         private Transform aimPt;
 
@@ -96,6 +99,18 @@ namespace DoubleAgent.Controllers
         {
             yield return new WaitForSeconds(time);
             actor.ActorAnimator.animator.SetLayerWeight(2, 0);
+        }
+
+        [InspectorButton("FireBullet")]
+        [SerializeField] bool m_FireBullet;
+
+        [ContextMenu("Fire Bullet")]
+        public void FireBullet()
+        {
+            if (bullet == null) return;
+            var bulletInstance = Instantiate(bullet, transform);
+            bulletInstance.UnParent();
+            bulletInstance.AddForce(1000 * Vector3.forward);
         }
     }
 }

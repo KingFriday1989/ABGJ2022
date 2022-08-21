@@ -40,7 +40,7 @@ namespace DoubleAgent.Controllers.Actors
         void MouseInput()
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            Physics.Raycast(ray, out RaycastHit hitInfo);
+            Physics.Raycast(ray, out RaycastHit hitInfo,1000,LayerMask.GetMask("Terrain"));
 
             if(hitInfo.collider != null)
             {

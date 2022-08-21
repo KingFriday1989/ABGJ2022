@@ -40,6 +40,9 @@ namespace DoubleAgent.Data.Actors
         public bool stepRight;
         public float AnimMovX;
         public float AnimMovY;
+
+        public List<Collider> ragdollColliders;
+        public List<Rigidbody> ragdollRigidbodies;
         #endregion
         [Space(10), Header("Weapons")]
         #region WEAPONS

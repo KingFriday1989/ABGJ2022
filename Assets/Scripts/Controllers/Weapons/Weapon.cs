@@ -18,6 +18,7 @@ namespace DoubleAgent.Controllers
 
         public Transform muzzlePt;
         public Actor actor;
+        public Rigidbody bullet;
 
         private Transform aimPt;
 

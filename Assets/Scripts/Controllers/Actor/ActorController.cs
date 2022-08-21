@@ -2,6 +2,7 @@ using DoubleAgent.Controllers.States.Actors;
 using Helpers;
 using UnityEngine;
 using Helpers;
+using RayFire;
 
 namespace DoubleAgent.Controllers.Actors
 {
@@ -77,6 +78,25 @@ namespace DoubleAgent.Controllers.Actors
             euler.x = 0;
             euler.z = 0;
             transform.rotation = Quaternion.Euler(euler);
+        }
+
+        public void DisableDynamite()
+        {
+            actor.ActorData.ItemL.gameObject.SetActive(false);
+        }
+        public void EnableDynamite()
+        {
+            actor.ActorData.ItemL.gameObject.SetActive(true);
+        }
+        public void SpawnDynamite()
+        {
+            var bomb = Instantiate(actor.ActorData.bombPrefab);
+            var rb = bomb.GetComponent<Rigidbody>();
+            rb.isKinematic = true;
+            bomb.transform.position = transform.position + transform.forward + new Vector3(0,1.5f,0);
+            rb.isKinematic = false;
+            rb.useGravity = true;
+            rb.velocity = transform.forward * 8 + transform.up * 4;
         }
 
         public static bool isGrounded(Transform transform, CharacterController characterController)

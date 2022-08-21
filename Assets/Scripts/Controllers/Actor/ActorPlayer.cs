@@ -10,6 +10,7 @@ namespace DoubleAgent.Controllers.Actors
             base.Awake();
             NavMeshAgent.enabled = false;
             ActorData.IsPlayer = true;
+            ActorAnimator.animator.SetLayerWeight(1, 1);
         }
     }
 }

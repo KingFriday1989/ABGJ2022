@@ -1,5 +1,5 @@
-using Data.Actors;
 using DoubleAgent.Controllers.States.Actors;
+using DoubleAgent.Data.Actors;
 using UnityEngine.AI;
 using UnityEngine;
 

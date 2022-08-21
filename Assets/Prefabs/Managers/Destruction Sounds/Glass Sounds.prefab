@@ -9,6 +9,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 518882764680757792, guid: 0843fcc0860bb78428f7b0280875a1df,
         type: 3}
+      propertyPath: Sounds
+      value: 
+      objectReference: {fileID: 11400000, guid: 16196552aca33a84da6281e8a9516182,
+        type: 2}
+    - target: {fileID: 518882764680757792, guid: 0843fcc0860bb78428f7b0280875a1df,
+        type: 3}
       propertyPath: Channel
       value: 14
       objectReference: {fileID: 0}
@@ -22,6 +28,12 @@ PrefabInstance:
       propertyPath: Sounds.Array.data[0]
       value: 
       objectReference: {fileID: 8300000, guid: 473d70e63ab36f54bae9e81087516de4, type: 3}
+    - target: {fileID: 518882764878337480, guid: 0843fcc0860bb78428f7b0280875a1df,
+        type: 3}
+      propertyPath: Sounds
+      value: 
+      objectReference: {fileID: 11400000, guid: 16196552aca33a84da6281e8a9516182,
+        type: 2}
     - target: {fileID: 518882764878337480, guid: 0843fcc0860bb78428f7b0280875a1df,
         type: 3}
       propertyPath: Channel
@@ -119,6 +131,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 518882765943442142, guid: 0843fcc0860bb78428f7b0280875a1df,
         type: 3}
+      propertyPath: Sounds
+      value: 
+      objectReference: {fileID: 11400000, guid: 16196552aca33a84da6281e8a9516182,
+        type: 2}
+    - target: {fileID: 518882765943442142, guid: 0843fcc0860bb78428f7b0280875a1df,
+        type: 3}
       propertyPath: Channel
       value: 15
       objectReference: {fileID: 0}
@@ -132,6 +150,12 @@ PrefabInstance:
       propertyPath: Sounds.Array.data[0]
       value: 
       objectReference: {fileID: 8300000, guid: 473d70e63ab36f54bae9e81087516de4, type: 3}
+    - target: {fileID: 518882766149611624, guid: 0843fcc0860bb78428f7b0280875a1df,
+        type: 3}
+      propertyPath: Sounds
+      value: 
+      objectReference: {fileID: 11400000, guid: 16196552aca33a84da6281e8a9516182,
+        type: 2}
     - target: {fileID: 518882766149611624, guid: 0843fcc0860bb78428f7b0280875a1df,
         type: 3}
       propertyPath: Channel

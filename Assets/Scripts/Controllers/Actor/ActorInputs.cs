@@ -243,7 +243,7 @@ namespace DoubleAgent.Controllers.Actors
                 actor.ActorData.AnimMovX = Mathf.Lerp(actor.ActorData.AnimMovX, 0f, 8f * Time.fixedDeltaTime);
             }
 
-            actor.ActorData.Speed = Mathf.Lerp(actor.ActorData.Speed,(actor.ActorData.Sprint) ? 1.5f : 1f, 2f * Time.deltaTime);
+            actor.ActorData.Speed = Mathf.Lerp(actor.ActorData.Speed,actor.ActorData.Sprint ? 2f : 1.25f, 8f * Time.deltaTime);
 
             if (actor.ActorData.MovX > 0.99f)
                 actor.ActorData.MovX = 1f;
@@ -259,10 +259,10 @@ namespace DoubleAgent.Controllers.Actors
             else if (actor.ActorData.MovY < 0.01f && actor.ActorData.MovY > -0.01f)
                 actor.ActorData.MovY = 0f;
 
-            if (actor.ActorData.Speed > 1.49f)
-                actor.ActorData.Speed = 1.5f;
-            else if (actor.ActorData.Speed < 1.01f)
-                actor.ActorData.Speed = 1f;
+            if (actor.ActorData.Speed > 1.99f)
+                actor.ActorData.Speed = 2f;
+            else if (actor.ActorData.Speed < 1.26f)
+                actor.ActorData.Speed = 1.25f;
 
             //var mov = Mathf.Max(Mathf.Abs(actor.ActorData.MovY), Mathf.Abs(actor.ActorData.MovX));
             //actor.ActorData.Mov = mov;

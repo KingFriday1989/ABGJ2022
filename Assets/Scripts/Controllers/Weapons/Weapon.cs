@@ -28,7 +28,8 @@ public class Weapon : MonoBehaviour
 
     void Update()
     {
-        aimPt.position = actor.transform.position + actor.transform.forward * 50f + 1.5f * Vector3.up;
+        //aimPt.position = actor.transform.position + actor.transform.forward * 50f + 1.5f * Vector3.up;
+        aimPt.localPosition = new Vector3(0, 0, 50);
     }
     [ContextMenu("Shoot Gun")]
     public void Fire()

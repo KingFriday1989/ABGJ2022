@@ -70,7 +70,7 @@ namespace DoubleAgent.Controllers.Actors
         void RotateCharacter()
         {
             var target = actor.ActorData.MouseTarget;
-            var lerp = Vector3.Slerp(transform.forward, target - transform.position, Time.deltaTime );
+            var lerp = Vector3.Slerp(transform.forward, target - transform.position, Time.deltaTime * 8);
             transform.forward = lerp;
 
             var euler = transform.rotation.eulerAngles;

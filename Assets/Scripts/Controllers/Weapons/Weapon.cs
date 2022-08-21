@@ -53,6 +53,7 @@ namespace DoubleAgent.Controllers
         {
             if (lastShot < Time.time)
             {
+                FireBullet();
                 lastShot = Time.time + 0.3f;
                 actor.ActorData.gun.Shoot();
                 actor.ActorAnimator.animator.SetLayerWeight(2, 1);
@@ -83,7 +84,7 @@ namespace DoubleAgent.Controllers
 
         public void TossGrenade()
         {
-            if(lastThrow < Time.time)
+            if(grenNum > 0 & lastThrow < Time.time)
             {
                 lastThrow = Time.time + 2;
                 lastAdd = Time.time + 4;

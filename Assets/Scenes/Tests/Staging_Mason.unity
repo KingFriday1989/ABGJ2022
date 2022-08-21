@@ -414,6 +414,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 374206557, guid: c967b3d3b3d988144acf28f592fdb2fe, type: 3}
+      propertyPath: demolitionType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1453203562746868, guid: c967b3d3b3d988144acf28f592fdb2fe, type: 3}
       propertyPath: m_Name
       value: SM_Bld_House_Preset_Garage_01
@@ -5483,7 +5487,7 @@ MonoBehaviour:
   initialization: 1
   simulationType: 1
   objectType: 0
-  demolitionType: 1
+  demolitionType: 3
   physics:
     materialType: 1
     material: {fileID: 0}
@@ -6868,8 +6872,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1037463954}
-  m_LocalRotation: {x: -0.29852274, y: 0.16273208, z: -0.051734366, w: -0.9390027}
-  m_LocalPosition: {x: 313.26727, y: 19.706467, z: -36.95137}
+  m_LocalRotation: {x: 0.26740545, y: -0.21354294, z: 0.060895644, w: 0.9376489}
+  m_LocalPosition: {x: 267.39557, y: 13.887511, z: -33.857887}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

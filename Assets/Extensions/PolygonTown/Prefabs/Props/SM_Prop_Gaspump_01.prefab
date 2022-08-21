@@ -414,7 +414,7 @@ MonoBehaviour:
     source: 0
     suffix: _frags
   showCenter: 0
-  centerPosition: {x: -1.2434378, y: 1.0461464, z: 0}
+  centerPosition: {x: -1.2434387, y: 1.0461464, z: 0}
   centerDirection: {x: 0, y: 0, z: 0, w: 1}
   transForm: {fileID: 4548368208436484}
   meshFilter: {fileID: 33869970850268740}
@@ -751,6 +751,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702405649288522125, guid: 56f8b57e3448535468ccaa7f1c6b6da1,
+        type: 3}
+      propertyPath: range
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702405649288522125, guid: 56f8b57e3448535468ccaa7f1c6b6da1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8706734350754081949, guid: 56f8b57e3448535468ccaa7f1c6b6da1,
         type: 3}

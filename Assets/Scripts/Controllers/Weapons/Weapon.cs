@@ -19,7 +19,6 @@ public class Weapon : MonoBehaviour
 
     private Transform aimPt;
 
-    // Start is called before the first frame update
     void Start()
     {
         grenNum = grenMax;

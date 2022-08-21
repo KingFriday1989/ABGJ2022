@@ -16,7 +16,7 @@ namespace DoubleAgent.Views.Game
         [SerializeField, ReadOnly] bool isLit;
         [SerializeField, ReadOnly] bool isOnFire;
         [SerializeField, ReadOnly] bool isSmoking;
-
+        
         public override void CreateParticles()
         {
             if(!isLit)
@@ -77,6 +77,12 @@ namespace DoubleAgent.Views.Game
             transform.UnParent();
             GetComponent<BoxCollider>().enabled = true;
             GetComponent<Rigidbody>().useGravity = true;
+        }
+
+        public void CreateParticles(int repeat)
+        {
+            for (int i = 0; i < repeat; i++)
+                CreateParticles();
         }
     }
 }

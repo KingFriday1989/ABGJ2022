@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace DoubleAgent.Views.Utility
 {
-    public class RandomParticleCreator : Core.Behaviour
+    public class RandomParticleCreator : DoubleAgentCore
     {
         [SerializeField] private ParticleSystem[] Particles;
 

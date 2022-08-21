@@ -36,6 +36,7 @@ namespace DoubleAgent.Controllers
 
         public void StartGame()
         {
+            GameData.State = GameStates.GameRunning;
             if(StartInfo != null)
                 Destroy(StartInfo.gameObject);
             if (GameTimer != null)

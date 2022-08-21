@@ -1,17 +1,17 @@
-using System.Collections.Generic;
+using DoubleAgent.Data;
+using DoubleAgent.Helpers;
+using Helpers.Extensions;
 using UnityEngine;
 using UnityEngine.AI;
-using DoubleAgent.Helpers;
-using DoubleAgent.Data;
-using Helpers.Extensions;
-
 
 namespace DoubleAgent.Controllers.Actors
 {
-    public class ActorInputs : MonoBehaviour
+    [RequireComponent(typeof(Actor))]
+    public class ActorInputs : Core.Behaviour
     {
-        public Actor actor;
         public WalkingDirections walkingDirection;
+        
+        private Actor actor;
         
         private void Start()
         {
@@ -20,11 +20,13 @@ namespace DoubleAgent.Controllers.Actors
         
         private void Update()
         {
+            if (GameData.State != GameStates.GameRunning) return;
+
             MouseInput();
             if (actor.ActorData.IsPlayer)
                 ActorInput();
 
-            WalkingDireaction();
+            WalkingDirection();
             ActorAnim();
             MovementFloats();
         }
@@ -39,6 +41,7 @@ namespace DoubleAgent.Controllers.Actors
                 actor.ActorData.MouseTarget = hitInfo.point;
             }
         }
+
         void ActorInput()
         {
             if (Input.GetKey(KeyCode.W))
@@ -81,7 +84,8 @@ namespace DoubleAgent.Controllers.Actors
                 actor.ActorData.Sprint = false;
 
         }
-        void WalkingDireaction()
+
+        void WalkingDirection()
         {
             var YRot = transform.rotation.eulerAngles.y;
             var Y = Mathf.Abs(YRot) <= 45 || Mathf.Abs(YRot) >= 135 ? 1:0;
@@ -99,6 +103,7 @@ namespace DoubleAgent.Controllers.Actors
 
             walkingDirection = Algorithms.GetWalkingDirection((actor.ActorData.moveStepRight) ? 1 : (actor.ActorData.moveStepLeft) ? -1 : 0, (actor.ActorData.moveForward) ? 1 : (actor.ActorData.moveBackward) ? -1 : 0, XRot, Y);
         }
+
         void ActorAnim()
         {
             actor.ActorData.forward = walkingDirection == WalkingDirections.WalkForward;
@@ -106,6 +111,7 @@ namespace DoubleAgent.Controllers.Actors
             actor.ActorData.stepLeft = walkingDirection == WalkingDirections.WalkLeft;
             actor.ActorData.stepRight = walkingDirection == WalkingDirections.WalkRight;
         }
+
         void MovementFloats()
         {
             actor.ActorData.MovY = Mathf.Lerp(actor.ActorData.MovY, (actor.ActorData.moveForward) ? 1f : (actor.ActorData.moveBackward) ? -1f : 0f, 2f * Time.fixedDeltaTime);

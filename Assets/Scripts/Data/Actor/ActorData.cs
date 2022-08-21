@@ -1,12 +1,12 @@
-using System.Collections;
+using DoubleAgent.Controllers;
+using RayFire;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using RayFire;
 
-namespace Data.Actors
+namespace DoubleAgent.Data.Actors
 {
-    public class ActorData : MonoBehaviour
+    public class ActorData : Core.Behaviour
     {
         [Header("General")]
         #region GENERAL
@@ -45,7 +45,7 @@ namespace Data.Actors
         #region WEAPONS
         public Weapon weapon;
         public GameObject bombPrefab;
-        public RayFire.RayfireGun gun;
+        public RayfireGun gun;
         #endregion
     }
 }

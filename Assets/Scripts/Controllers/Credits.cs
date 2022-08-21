@@ -4,7 +4,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Video;
 
-namespace Controllers
+namespace DoubleAgent.Controllers
 {
     public sealed class Credits : Scene<Credits>
     {

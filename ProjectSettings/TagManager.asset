@@ -8,6 +8,7 @@ TagManager:
   - SoundFX
   - Particles
   - Target
+  - Ground
   layers:
   - Default
   - TransparentFX

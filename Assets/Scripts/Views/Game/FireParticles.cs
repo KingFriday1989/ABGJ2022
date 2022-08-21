@@ -16,6 +16,7 @@ namespace DoubleAgent.Views.Game
         [SerializeField, ReadOnly] bool isLit;
         [SerializeField, ReadOnly] bool isOnFire;
         [SerializeField, ReadOnly] bool isSmoking;
+        [SerializeField, ReadOnly] bool isFalling;
         
         public override void CreateParticles()
         {
@@ -53,11 +54,26 @@ namespace DoubleAgent.Views.Game
         }
 
         //--------------------------
+        private void Update()
+        {
+            if(isFalling)
+                transform.eulerAngles = Vector3.zero;
+        }
+
         private void OnTriggerEnter(Collider other)
         {
             //Log(other.gameObject.name);
             if (isOnFire || !other.CompareLayer(Constants.LAYER_PROJECTILE)) return;
             CreateParticles();
+        }
+
+        private void OnCollisionEnter(Collision collision)
+        {
+            //Freeze falling when we hit the ground
+            if(isFalling && collision.gameObject.CompareTag(Constants.TAG_GROUND))
+            {
+                GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+            }
         }
 
         private void ClearChildren()
@@ -74,6 +90,8 @@ namespace DoubleAgent.Views.Game
         [ContextMenu("Enable Gravity")]
         public void EnableGravity()
         {
+            if(isFalling) return;
+            isFalling = true;
             transform.UnParent();
             GetComponent<BoxCollider>().enabled = true;
             GetComponent<Rigidbody>().useGravity = true;

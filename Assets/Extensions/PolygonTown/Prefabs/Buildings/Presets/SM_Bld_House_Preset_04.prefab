@@ -120,7 +120,7 @@ MonoBehaviour:
   initialization: 1
   simulationType: 1
   objectType: 0
-  demolitionType: 1
+  demolitionType: 3
   physics:
     materialType: 9
     material: {fileID: 13400000, guid: 3aeb7dadc0c69d54d9e5777e9d5631f1, type: 2}
@@ -253,7 +253,7 @@ MonoBehaviour:
     needNewMat: 0
   damage:
     enable: 1
-    maxDamage: 10
+    maxDamage: 100
     currentDamage: 0
     collect: 0
     multiplier: 1
@@ -456,7 +456,7 @@ PrefabInstance:
     - target: {fileID: 8679375600095519174, guid: 2ac42b4a931dfd84d8b007d703850b07,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.89
+      value: -1.72
       objectReference: {fileID: 0}
     - target: {fileID: 8679375600095519174, guid: 2ac42b4a931dfd84d8b007d703850b07,
         type: 3}
@@ -635,7 +635,7 @@ PrefabInstance:
     - target: {fileID: 1249909880991021183, guid: 79da8ecdae302f54a910daac9435b1c2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.23
+      value: -2.0600019
       objectReference: {fileID: 0}
     - target: {fileID: 1249909880991021183, guid: 79da8ecdae302f54a910daac9435b1c2,
         type: 3}
@@ -710,7 +710,7 @@ PrefabInstance:
     - target: {fileID: 7451285807603261910, guid: cbcfc7b3ed6ffd5478e6d513a3b9aed0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.83000183
       objectReference: {fileID: 0}
     - target: {fileID: 7451285807603261910, guid: cbcfc7b3ed6ffd5478e6d513a3b9aed0,
         type: 3}

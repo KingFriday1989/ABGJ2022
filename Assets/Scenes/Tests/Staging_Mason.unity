@@ -414,6 +414,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 374206557, guid: c967b3d3b3d988144acf28f592fdb2fe, type: 3}
+      propertyPath: demolitionType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1453203562746868, guid: c967b3d3b3d988144acf28f592fdb2fe, type: 3}
       propertyPath: m_Name
       value: SM_Bld_House_Preset_Garage_01
@@ -461,6 +465,16 @@ PrefabInstance:
     - target: {fileID: 4537300744277158, guid: c967b3d3b3d988144acf28f592fdb2fe, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1249909881401720793, guid: c967b3d3b3d988144acf28f592fdb2fe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8706734352196210281, guid: c967b3d3b3d988144acf28f592fdb2fe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c967b3d3b3d988144acf28f592fdb2fe, type: 3}
@@ -3257,7 +3271,7 @@ PrefabInstance:
     - target: {fileID: 1810216681240995229, guid: 97b4d5ba297681d429b34cffa54de42f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 200.57
+      value: 257.5
       objectReference: {fileID: 0}
     - target: {fileID: 1810216681240995229, guid: 97b4d5ba297681d429b34cffa54de42f,
         type: 3}
@@ -3584,12 +3598,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 419b03f06680d66468213533dc59243b, type: 3}
---- !u!23 &606505384 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 23464850384201512, guid: facb89cf187493649838350bdbfaccb5,
-    type: 3}
-  m_PrefabInstance: {fileID: 1795943060}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &613883603
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5479,7 +5487,7 @@ MonoBehaviour:
   initialization: 1
   simulationType: 1
   objectType: 0
-  demolitionType: 1
+  demolitionType: 3
   physics:
     materialType: 1
     material: {fileID: 0}
@@ -6864,8 +6872,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1037463954}
-  m_LocalRotation: {x: -0.2408873, y: 0.18270734, z: -0.046228543, w: -0.952079}
-  m_LocalPosition: {x: 208.68044, y: 13.451733, z: -32.602406}
+  m_LocalRotation: {x: 0.26740545, y: -0.21354294, z: 0.060895644, w: 0.9376489}
+  m_LocalPosition: {x: 267.39557, y: 13.887511, z: -33.857887}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6973,6 +6981,16 @@ PrefabInstance:
     - target: {fileID: 4283469039250120, guid: a61fb0e1e83f7f348a4f48d3f92f4ee8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7327500387827309187, guid: a61fb0e1e83f7f348a4f48d3f92f4ee8,
+        type: 3}
+      propertyPath: _OnDemolition.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7327500387827309187, guid: a61fb0e1e83f7f348a4f48d3f92f4ee8,
+        type: 3}
+      propertyPath: _OnDemolition.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a61fb0e1e83f7f348a4f48d3f92f4ee8, type: 3}
@@ -9462,21 +9480,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4038663022677359539, guid: a325f5ef4df48994282b0920185e0fe5,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.83000183
-      objectReference: {fileID: 0}
-    - target: {fileID: 5915054790850402172, guid: a325f5ef4df48994282b0920185e0fe5,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.72
-      objectReference: {fileID: 0}
-    - target: {fileID: 6275426790390819600, guid: a325f5ef4df48994282b0920185e0fe5,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.0600019
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a325f5ef4df48994282b0920185e0fe5, type: 3}
 --- !u!1 &1504745037
@@ -10404,56 +10407,6 @@ PrefabInstance:
     - target: {fileID: 4166010362633542, guid: facb89cf187493649838350bdbfaccb5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2565014504087441449, guid: facb89cf187493649838350bdbfaccb5,
-        type: 3}
-      propertyPath: _OnDemolition.m_PersistentCalls.m_Calls.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2565014504087441449, guid: facb89cf187493649838350bdbfaccb5,
-        type: 3}
-      propertyPath: _OnDemolition.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2565014504087441449, guid: facb89cf187493649838350bdbfaccb5,
-        type: 3}
-      propertyPath: _OnDemolition.m_PersistentCalls.m_Calls.Array.data[4].m_Target
-      value: 
-      objectReference: {fileID: 606505384}
-    - target: {fileID: 2565014504087441449, guid: facb89cf187493649838350bdbfaccb5,
-        type: 3}
-      propertyPath: _OnDemolition.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2565014504087441449, guid: facb89cf187493649838350bdbfaccb5,
-        type: 3}
-      propertyPath: _OnDemolition.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
-      value: set_enabled
-      objectReference: {fileID: 0}
-    - target: {fileID: 2565014504087441449, guid: facb89cf187493649838350bdbfaccb5,
-        type: 3}
-      propertyPath: _OnDemolition.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
-      value: UnityEngine.Renderer, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 2565014504087441449, guid: facb89cf187493649838350bdbfaccb5,
-        type: 3}
-      propertyPath: _OnDemolition.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_BoolArgument
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2565014504087441449, guid: facb89cf187493649838350bdbfaccb5,
-        type: 3}
-      propertyPath: _OnDemolition.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7517596992383773656, guid: facb89cf187493649838350bdbfaccb5,
-        type: 3}
-      propertyPath: advanced.inner
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7517596992383773656, guid: facb89cf187493649838350bdbfaccb5,
-        type: 3}
-      propertyPath: advanced.decompose
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: facb89cf187493649838350bdbfaccb5, type: 3}

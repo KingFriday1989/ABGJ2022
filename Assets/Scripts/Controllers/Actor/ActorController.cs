@@ -95,10 +95,32 @@ namespace DoubleAgent.Controllers.Actors
             rb.velocity = transform.forward * 8 + transform.up * 4;
         }
 
+        [ContextMenu("KillActor")]
+        public void KillActor()
+        {
+            actor.ActorAnimator.animator.enabled = false;
+            actor.ActorAnimator.gameObject.SetActive(false);
+            GetComponent<ActorInputs>().enabled = false;
+            actor.NavMeshAgent.enabled = false;
+            actor.CharacterController.enabled = false;
+
+
+            foreach (var collider in actor.ActorData.ragdollColliders)
+            {
+                collider.enabled = true;
+            }
+            foreach (var rb in actor.ActorData.ragdollRigidbodies)
+            {
+                rb.isKinematic = false;
+                rb.useGravity = true;
+                rb.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
+            }
+        }
+
         public static bool isGrounded(Transform transform, CharacterController characterController)
         {
             Vector3 Position = transform.position + new Vector3(0,0.1f,0);
-            float Legnth = 0.2f ;
+            float Legnth = 0.4f ;
             if(RayCheck(Position,-transform.up,Legnth))
                 return true;
             else
@@ -107,7 +129,7 @@ namespace DoubleAgent.Controllers.Actors
 
         public static bool RayCheck(Vector3 Position, Vector3 Direction, float Distance)
         {
-            var cast = Physics.Raycast(Position, Direction, out RaycastHit hitInfo, Distance);
+            var cast = Physics.Raycast(Position, Direction, out RaycastHit hitInfo, Distance, LayerMask.GetMask("Terrain"));
 
             if (hitInfo.collider != null)
                 return true;

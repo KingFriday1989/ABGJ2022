@@ -121,7 +121,7 @@ MonoBehaviour:
   initialization: 1
   simulationType: 1
   objectType: 0
-  demolitionType: 1
+  demolitionType: 3
   physics:
     materialType: 9
     material: {fileID: 13400000, guid: 3aeb7dadc0c69d54d9e5777e9d5631f1, type: 2}

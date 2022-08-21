@@ -21,13 +21,15 @@ public class Weapon : MonoBehaviour
 
     void Start()
     {
+        grenNum = grenMax;
         lastShot = Time.time;
         aimPt = GameObject.FindGameObjectWithTag("Target").transform;
     }
 
     void Update()
     {
-        aimPt.position = actor.transform.position + actor.transform.forward * 50f + 1.5f * Vector3.up;
+        //aimPt.position = actor.transform.position + actor.transform.forward * 50f + 1.5f * Vector3.up;
+        aimPt.localPosition = new Vector3(0, 0, 50);
     }
     [ContextMenu("Shoot Gun")]
     public void Fire()
@@ -35,6 +37,11 @@ public class Weapon : MonoBehaviour
         if (lastShot < Time.time)
         {
             actor.ActorData.gun.Shoot();
+            actor.ActorAnimator.animator.SetLayerWeight(2, 1);
+            actor.ActorAnimator.animator.Play("FireWeapon", 2);
+            StopCoroutine(LayerDelay(0.5f));
+            StartCoroutine(LayerDelay(0.5f));
+
             lastShot = Time.time + FireRt;
             SoundManager.PlaySoundOnChannel(gunshot, 1);
             Ray ray = new Ray(muzzlePt.position, actor.transform.forward + new Vector3(0,1,0));
@@ -56,5 +63,19 @@ public class Weapon : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void TossGrenade()
+    {
+        actor.ActorAnimator.animator.SetLayerWeight(2, 1);
+        actor.ActorAnimator.animator.Play("ThrowGrenade", 2);
+        grenNum--;
+        StopCoroutine(LayerDelay(1.25f));
+        StartCoroutine(LayerDelay(1.25f));
+    }
+    IEnumerator LayerDelay(float time)
+    {
+        yield return new WaitForSeconds(time);
+        actor.ActorAnimator.animator.SetLayerWeight(2, 0);
     }
 }

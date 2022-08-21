@@ -13,7 +13,8 @@ namespace Data.Actors
         public bool IsPlayer;
         public NavMeshAgent NavMeshAgent;
         public List<Renderer> Renderers;
-        public Transform ItemHolder;
+        public Transform ItemR;
+        public Transform ItemL;
         public Vector3 MouseTarget;
         #endregion
         [Space(10),Header("Movement")]
@@ -42,8 +43,8 @@ namespace Data.Actors
         #endregion
 
         #region WEAPONS
-        public Weapon pistol;
-        public Weapon grenade;
+        public Weapon weapon;
+        public GameObject bombPrefab;
         public RayFire.RayfireGun gun;
         #endregion
     }

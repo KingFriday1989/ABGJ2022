@@ -660,7 +660,7 @@ MonoBehaviour:
   initialization: 1
   simulationType: 1
   objectType: 0
-  demolitionType: 3
+  demolitionType: 9
   physics:
     materialType: 4
     material: {fileID: 13400000, guid: 01571ba68fb2dad46aa03094ab219579, type: 2}
@@ -785,7 +785,7 @@ MonoBehaviour:
     action: 0
     addRigid: 1
     inheritScale: 1
-    inheritMaterials: 0
+    inheritMaterials: 1
   materials:
     innerMaterial: {fileID: 2100000, guid: a23bccc510f5b7847b7fa1ec4b00b8e2, type: 2}
     mappingScale: 0.1
@@ -793,7 +793,7 @@ MonoBehaviour:
     needNewMat: 0
   damage:
     enable: 1
-    maxDamage: 100
+    maxDamage: 10
     currentDamage: 0
     collect: 0
     multiplier: 1
@@ -848,7 +848,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   voronoi:
-    amount: 6
+    amount: 7
     centerBias: 0
   splinters:
     axis: 1
@@ -917,7 +917,7 @@ MonoBehaviour:
     lattice: 0
     density: 7
     noise: 100
-  mode: 0
+  mode: 1
   material:
     innerMaterial: {fileID: 2100000, guid: a23bccc510f5b7847b7fa1ec4b00b8e2, type: 2}
     mappingScale: 0.1
@@ -952,10 +952,10 @@ MonoBehaviour:
     vertexLimitation: 0
     vertexAmount: 300
   export:
-    source: 3
+    source: 0
     suffix: _frags
-  showCenter: 0
-  centerPosition: {x: -1.2434378, y: 1.0461464, z: 0}
+  showCenter: 1
+  centerPosition: {x: -1.2434387, y: 1.0461464, z: 0}
   centerDirection: {x: 0, y: 0, z: 0, w: 1}
   transForm: {fileID: 4539974619004416}
   meshFilter: {fileID: 33332463602786908}

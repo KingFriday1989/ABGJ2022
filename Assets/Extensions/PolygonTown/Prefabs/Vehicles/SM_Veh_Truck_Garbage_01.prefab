@@ -419,7 +419,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   voronoi:
-    amount: 17
+    amount: 12
     centerBias: 0
   splinters:
     axis: 1

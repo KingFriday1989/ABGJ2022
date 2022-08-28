@@ -660,9 +660,9 @@ MonoBehaviour:
   initialization: 1
   simulationType: 1
   objectType: 0
-  demolitionType: 9
+  demolitionType: 3
   physics:
-    materialType: 4
+    materialType: 0
     material: {fileID: 13400000, guid: 01571ba68fb2dad46aa03094ab219579, type: 2}
     massBy: 0
     mass: 1
@@ -955,8 +955,8 @@ MonoBehaviour:
     source: 0
     suffix: _frags
   showCenter: 1
-  centerPosition: {x: -1.2434387, y: 1.0461464, z: 0}
-  centerDirection: {x: 0, y: 0, z: 0, w: 1}
+  centerPosition: {x: -1.2434386, y: 1.0461464, z: 0.00000023841858}
+  centerDirection: {x: 0, y: -1.3500312e-13, z: 0, w: 0.9999999}
   transForm: {fileID: 4539974619004416}
   meshFilter: {fileID: 33332463602786908}
   meshRenderer: {fileID: 23958318780703202}

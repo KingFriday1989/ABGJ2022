@@ -121,7 +121,7 @@ MonoBehaviour:
     centerBias: 0
   splinters:
     axis: 1
-    amount: 15
+    amount: 12
     strength: 0.7
     centerBias: 0
   slabs:
@@ -265,7 +265,7 @@ MonoBehaviour:
   initialization: 1
   simulationType: 1
   objectType: 0
-  demolitionType: 1
+  demolitionType: 3
   physics:
     materialType: 9
     material: {fileID: 0}
@@ -299,7 +299,7 @@ MonoBehaviour:
     layer: 
     connect: {fileID: 0}
   limitations:
-    byCollision: 1
+    byCollision: 0
     solidity: 0.1
     tag: Untagged
     depth: 1

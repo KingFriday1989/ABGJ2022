@@ -39,7 +39,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: demolitionType
-    value: 1
+    value: 3
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: physics.materialType
@@ -48,7 +48,7 @@ Preset:
   - target: {fileID: 0}
     propertyPath: physics.material
     value: 
-    objectReference: {fileID: 0}
+    objectReference: {fileID: 13400000, guid: 3aeb7dadc0c69d54d9e5777e9d5631f1, type: 2}
   - target: {fileID: 0}
     propertyPath: physics.massBy
     value: 0
@@ -75,7 +75,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: physics.solverIterations
-    value: 6
+    value: 5
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: physics.dampening

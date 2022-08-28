@@ -39,16 +39,16 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: demolitionType
-    value: 1
+    value: 3
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: physics.materialType
-    value: 0
+    value: 1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: physics.material
     value: 
-    objectReference: {fileID: 0}
+    objectReference: {fileID: 13400000, guid: 01571ba68fb2dad46aa03094ab219579, type: 2}
   - target: {fileID: 0}
     propertyPath: physics.massBy
     value: 0
@@ -568,7 +568,8 @@ Preset:
   - target: {fileID: 0}
     propertyPath: materials.innerMaterial
     value: 
-    objectReference: {fileID: 2100000, guid: 71f1cece600aaf249832d854cccce3a4, type: 2}
+    objectReference: {fileID: -5243988174349660497, guid: c7a2b063c4998274d9c1d1f3a7bd0125,
+      type: 3}
   - target: {fileID: 0}
     propertyPath: materials.mappingScale
     value: 0.1
@@ -587,7 +588,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: damage.maxDamage
-    value: 10
+    value: 100
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: damage.currentDamage

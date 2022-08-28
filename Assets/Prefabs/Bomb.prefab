@@ -134,11 +134,11 @@ MonoBehaviour:
   showGizmo: 0
   rangeType: 0
   fadeType: 0
-  range: 5
+  range: 4
   deletion: 0
-  strength: 2.5
-  variation: 50
-  chaos: 30
+  strength: 2
+  variation: 25
+  chaos: 50
   forceByMass: 1
   affectInactive: 0
   affectKinematic: 0
@@ -173,10 +173,10 @@ MonoBehaviour:
   _OnExplode:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7004193594998861872}
-        m_TargetAssemblyTypeName: Controllers.Game.Bomb, TechSkullStudios.DoubleAgent
-        m_MethodName: CheckForDestructibles
-        m_Mode: 1
+      - m_Target: {fileID: 8702405649288522125}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -185,10 +185,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 8702405649288522125}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
+      - m_Target: {fileID: 7004193594998861872}
+        m_TargetAssemblyTypeName: Controllers.Game.Bomb, TechSkullStudios.DoubleAgent
+        m_MethodName: CheckForDestructibles
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -242,9 +242,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 30
+  MaxDistance: 100
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -277,7 +277,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.5
       inSlope: 0
       outSlope: 0
       tangentMode: 0

@@ -245,7 +245,7 @@ MonoBehaviour:
   objectType: 0
   demolitionType: 3
   physics:
-    materialType: 1
+    materialType: 0
     material: {fileID: 13400000, guid: 01571ba68fb2dad46aa03094ab219579, type: 2}
     massBy: 0
     mass: 1
@@ -376,7 +376,7 @@ MonoBehaviour:
     needNewMat: 0
   damage:
     enable: 1
-    maxDamage: 10
+    maxDamage: 100
     currentDamage: 0
     collect: 0
     multiplier: 1
@@ -431,7 +431,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   voronoi:
-    amount: 15
+    amount: 13
     centerBias: 0
   splinters:
     axis: 1
@@ -538,8 +538,8 @@ MonoBehaviour:
     source: 0
     suffix: _frags
   showCenter: 0
-  centerPosition: {x: -1.2434378, y: 1.0461464, z: 0}
-  centerDirection: {x: 0, y: 0, z: 0, w: 1}
+  centerPosition: {x: -1.2434367, y: 1.0461464, z: -0.0000014305115}
+  centerDirection: {x: 0, y: 1.7763568e-13, z: 0, w: 0.9999999}
   transForm: {fileID: 0}
   meshFilter: {fileID: 0}
   meshRenderer: {fileID: 0}

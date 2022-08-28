@@ -132,7 +132,7 @@ MonoBehaviour:
   initialization: 1
   simulationType: 1
   objectType: 0
-  demolitionType: 0
+  demolitionType: 3
   physics:
     materialType: 1
     material: {fileID: 13400000, guid: 01571ba68fb2dad46aa03094ab219579, type: 2}
@@ -155,18 +155,18 @@ MonoBehaviour:
     physicsDataCorState: 0
   activation:
     local: 0
-    byOffset: 0
+    byOffset: 0.2
     byVelocity: 0
-    byDamage: 0
+    byDamage: 10
     byActivator: 0
-    byImpact: 0
+    byImpact: 1
     byConnectivity: 0
     unyielding: 0
     activatable: 0
     layer: 
     connect: {fileID: 0}
   limitations:
-    byCollision: 1
+    byCollision: 0
     solidity: 0.1
     tag: Untagged
     depth: 1
@@ -181,9 +181,9 @@ MonoBehaviour:
     amount: 15
     variation: 0
     depthFade: 0.5
-    contactBias: 0
+    contactBias: 1
     seed: 1
-    useShatter: 0
+    useShatter: 1
     clusterize: 0
     simType: 4
     meshInput: 9
@@ -259,12 +259,13 @@ MonoBehaviour:
     inheritScale: 1
     inheritMaterials: 0
   materials:
-    innerMaterial: {fileID: 0}
+    innerMaterial: {fileID: -5243988174349660497, guid: c7a2b063c4998274d9c1d1f3a7bd0125,
+      type: 3}
     mappingScale: 0.1
     outerMaterial: {fileID: 0}
     needNewMat: 0
   damage:
-    enable: 0
+    enable: 1
     maxDamage: 100
     currentDamage: 0
     collect: 0
@@ -320,7 +321,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   voronoi:
-    amount: 4
+    amount: 5
     centerBias: 0
   splinters:
     axis: 1
@@ -427,7 +428,7 @@ MonoBehaviour:
     source: 0
     suffix: _frags
   showCenter: 0
-  centerPosition: {x: -1.2434378, y: 1.0461464, z: 0}
+  centerPosition: {x: -1.243438, y: 1.0461464, z: 0}
   centerDirection: {x: 0, y: 0, z: 0, w: 1}
   transForm: {fileID: 0}
   meshFilter: {fileID: 0}

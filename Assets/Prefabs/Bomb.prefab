@@ -136,9 +136,9 @@ MonoBehaviour:
   fadeType: 0
   range: 4
   deletion: 0
-  strength: 2
-  variation: 25
-  chaos: 50
+  strength: 1.5
+  variation: 20
+  chaos: 75
   forceByMass: 1
   affectInactive: 0
   affectKinematic: 0

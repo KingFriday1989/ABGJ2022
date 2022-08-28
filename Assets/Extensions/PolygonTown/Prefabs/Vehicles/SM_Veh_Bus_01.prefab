@@ -706,7 +706,7 @@ MonoBehaviour:
       m_Center: {x: 0, y: 0, z: 0}
       m_Extent: {x: 0, y: 0, z: 0}
   meshDemolition:
-    amount: 15
+    amount: 8
     variation: 0
     depthFade: 0.5
     contactBias: 1
@@ -793,7 +793,7 @@ MonoBehaviour:
     needNewMat: 0
   damage:
     enable: 1
-    maxDamage: 10
+    maxDamage: 100
     currentDamage: 0
     collect: 0
     multiplier: 1
@@ -848,7 +848,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   voronoi:
-    amount: 18
+    amount: 6
     centerBias: 0
   splinters:
     axis: 1
@@ -917,7 +917,7 @@ MonoBehaviour:
     lattice: 0
     density: 7
     noise: 100
-  mode: 1
+  mode: 0
   material:
     innerMaterial: {fileID: 2100000, guid: a23bccc510f5b7847b7fa1ec4b00b8e2, type: 2}
     mappingScale: 0.1
@@ -952,14 +952,14 @@ MonoBehaviour:
     vertexLimitation: 0
     vertexAmount: 300
   export:
-    source: 0
+    source: 3
     suffix: _frags
   showCenter: 0
   centerPosition: {x: -1.2434378, y: 1.0461464, z: 0}
   centerDirection: {x: 0, y: 0, z: 0, w: 1}
-  transForm: {fileID: 0}
-  meshFilter: {fileID: 0}
-  meshRenderer: {fileID: 0}
+  transForm: {fileID: 4539974619004416}
+  meshFilter: {fileID: 33332463602786908}
+  meshRenderer: {fileID: 23958318780703202}
   skinnedMeshRend: {fileID: 0}
   meshFilters: []
   meshes: []
@@ -969,17 +969,17 @@ MonoBehaviour:
   fragmentsLast: []
   origSubMeshIdsRF: []
   materials:
-  - {fileID: 2100000, guid: 28646867ddcf90a4989276acd313ea43, type: 2}
+  - {fileID: 2100000, guid: 87afcd97595cd02479bfcfd00d66fda9, type: 2}
   shatterMode: 1
   colorPreview: 1
   scalePreview: 1
   previewScale: 0
-  size: 3.2818766
+  size: 12.280663
   rescaleFix: 1
   originalScale: {x: 1, y: 1, z: 1}
   bound:
-    m_Center: {x: 4.2696943, y: 1.0461464, z: -7.920229}
-    m_Extent: {x: 1.2545624, y: 1.0554018, z: 0.06984741}
+    m_Center: {x: 0, y: 1.7839774, z: 0.6875055}
+    m_Extent: {x: 1.6186445, y: 1.5634652, z: 5.7130756}
   resetState: 0
 --- !u!1 &1422013066050804
 GameObject:

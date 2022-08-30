@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4386079016471490}
   - component: {fileID: 33763926924187556}
   - component: {fileID: 23819531754081256}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: SM_Bld_House_Window_Glass_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,8 @@ GameObject:
   - component: {fileID: 64315100549362762}
   - component: {fileID: 2048860368690270264}
   - component: {fileID: 766754930808793473}
-  m_Layer: 0
+  - component: {fileID: -229717321142568344}
+  m_Layer: 14
   m_Name: SM_Bld_House_Roof_Window_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -524,6 +525,22 @@ MonoBehaviour:
     m_Center: {x: 0.00000023841858, y: 0.00000029802322, z: -0.00000011920929}
     m_Extent: {x: 1.935615, y: 1.4017074, z: 2.678155}
   resetState: 0
+--- !u!114 &-229717321142568344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557512372313378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa5696cb3a03faf4596e5855ecff7402, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Renderers: []
+  Position: {x: 0, y: 0, z: 0}
+  Materials: []
+  InitialAlpha: 0
 --- !u!1001 &769911545383459046
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -535,6 +552,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wood Sounds
+      objectReference: {fileID: 0}
+    - target: {fileID: 1249909880991021180, guid: 79da8ecdae302f54a910daac9435b1c2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 1249909880991021183, guid: 79da8ecdae302f54a910daac9435b1c2,
         type: 3}
@@ -590,6 +612,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1249909881478991286, guid: 79da8ecdae302f54a910daac9435b1c2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1249909881541277468, guid: 79da8ecdae302f54a910daac9435b1c2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1249909881670026580, guid: 79da8ecdae302f54a910daac9435b1c2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1249909882544100028, guid: 79da8ecdae302f54a910daac9435b1c2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79da8ecdae302f54a910daac9435b1c2, type: 3}
@@ -665,6 +707,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Score 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6118184346554329720, guid: 9c4578644e3b60a458830e49f6e4a9cf,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c4578644e3b60a458830e49f6e4a9cf, type: 3}

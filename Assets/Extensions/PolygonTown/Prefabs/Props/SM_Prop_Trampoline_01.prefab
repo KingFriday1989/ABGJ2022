@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 23075178501773018}
   - component: {fileID: 64152602147131438}
   - component: {fileID: 6745501057104416478}
-  m_Layer: 0
+  - component: {fileID: 2943672298256343422}
+  m_Layer: 14
   m_Name: SM_Prop_Trampoline_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,3 +116,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2943672298256343422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027195860071790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa5696cb3a03faf4596e5855ecff7402, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Renderers: []
+  Position: {x: 0, y: 0, z: 0}
+  Materials: []
+  InitialAlpha: 0

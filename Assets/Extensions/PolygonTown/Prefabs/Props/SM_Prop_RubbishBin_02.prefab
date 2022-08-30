@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4768393589888910}
   - component: {fileID: 33885729566950546}
   - component: {fileID: 23583415554110088}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: SM_Prop_RubbishBin_02_Lid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,8 @@ GameObject:
   - component: {fileID: 64322446370928550}
   - component: {fileID: 4213075767867044701}
   - component: {fileID: 5061257685414195041}
-  m_Layer: 0
+  - component: {fileID: 97735407984489894}
+  m_Layer: 14
   m_Name: SM_Prop_RubbishBin_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -522,6 +523,22 @@ MonoBehaviour:
     m_Center: {x: 4.2696943, y: 1.0461464, z: -7.920229}
     m_Extent: {x: 1.2545624, y: 1.0554018, z: 0.06984741}
   resetState: 0
+--- !u!114 &97735407984489894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948180574847748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa5696cb3a03faf4596e5855ecff7402, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Renderers: []
+  Position: {x: 0, y: 0, z: 0}
+  Materials: []
+  InitialAlpha: 0
 --- !u!1001 &3387832965020237061
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -529,6 +546,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4341400595569028}
     m_Modifications:
+    - target: {fileID: 3878819771816838835, guid: db50912e10d1756428f6d4c7d00f532e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3878819772013236571, guid: db50912e10d1756428f6d4c7d00f532e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3878819772881918393, guid: db50912e10d1756428f6d4c7d00f532e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3878819772945244947, guid: db50912e10d1756428f6d4c7d00f532e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 3878819773464013936, guid: db50912e10d1756428f6d4c7d00f532e,
         type: 3}
       propertyPath: m_RootOrder
@@ -589,6 +626,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Concrete Sounds
       objectReference: {fileID: 0}
+    - target: {fileID: 3878819773464013939, guid: db50912e10d1756428f6d4c7d00f532e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db50912e10d1756428f6d4c7d00f532e, type: 3}
 --- !u!4 &1932138977179390325 stripped
@@ -608,6 +650,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Score 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3944254032668328483, guid: cd391001b716dab43971f48aa81058ab,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 7310369174283935062, guid: cd391001b716dab43971f48aa81058ab,
         type: 3}

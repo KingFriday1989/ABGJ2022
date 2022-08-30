@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 33375367624126038}
   - component: {fileID: 23365447836650086}
   - component: {fileID: 64986039629937044}
-  m_Layer: 0
+  - component: {fileID: -142800208869880004}
+  m_Layer: 14
   m_Name: SM_Env_Plant_Vege_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1678349427265490}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5556061, y: 1.5556061, z: 1.5556061}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -98,3 +99,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 43493366493280856, guid: c67c08c599761de41be37a5338ffa682, type: 2}
+--- !u!114 &-142800208869880004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678349427265490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa5696cb3a03faf4596e5855ecff7402, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Renderers: []
+  Position: {x: 0, y: 0, z: 0}
+  Materials: []
+  InitialAlpha: 0

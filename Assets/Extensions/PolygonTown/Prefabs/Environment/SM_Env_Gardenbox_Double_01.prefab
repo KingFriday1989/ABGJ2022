@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 64197308864273820}
   - component: {fileID: 4472822704895133003}
   - component: {fileID: 4574648621697011722}
-  m_Layer: 0
+  - component: {fileID: -6611808801889205269}
+  m_Layer: 14
   m_Name: SM_Env_Gardenbox_Double_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -438,6 +439,22 @@ MonoBehaviour:
     m_Center: {x: 0, y: 0.37861013, z: 0}
     m_Extent: {x: 1.9672021, y: 0.37861013, z: 1.0459771}
   resetState: 0
+--- !u!114 &-6611808801889205269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007755213212034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa5696cb3a03faf4596e5855ecff7402, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Renderers: []
+  Position: {x: 0, y: 0, z: 0}
+  Materials: []
+  InitialAlpha: 0
 --- !u!1001 &1809530543456510652
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -449,6 +466,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wood Sounds
+      objectReference: {fileID: 0}
+    - target: {fileID: 1249909880991021180, guid: 79da8ecdae302f54a910daac9435b1c2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 1249909880991021183, guid: 79da8ecdae302f54a910daac9435b1c2,
         type: 3}
@@ -504,6 +526,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1249909881478991286, guid: 79da8ecdae302f54a910daac9435b1c2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1249909881541277468, guid: 79da8ecdae302f54a910daac9435b1c2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1249909881670026580, guid: 79da8ecdae302f54a910daac9435b1c2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1249909882544100028, guid: 79da8ecdae302f54a910daac9435b1c2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79da8ecdae302f54a910daac9435b1c2, type: 3}
@@ -579,6 +621,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Score 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6118184346554329720, guid: 9c4578644e3b60a458830e49f6e4a9cf,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c4578644e3b60a458830e49f6e4a9cf, type: 3}

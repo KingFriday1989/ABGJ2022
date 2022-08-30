@@ -1,3 +1,5 @@
+using DoubleAgent.Controllers.Actors;
+
 namespace DoubleAgent.Controllers.States.Actors
 {
     public class ActorState_Idle : AnimationState_Base

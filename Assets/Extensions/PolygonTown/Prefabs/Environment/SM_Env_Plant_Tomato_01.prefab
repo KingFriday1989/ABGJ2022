@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 33477030257298930}
   - component: {fileID: 23397561991317314}
   - component: {fileID: 64920728617184192}
-  m_Layer: 0
+  - component: {fileID: 1452364838309547649}
+  m_Layer: 14
   m_Name: SM_Env_Plant_Tomato_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,3 +99,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 43414373471075328, guid: e21ec5980f19b5c43b03df92ff44b134, type: 2}
+--- !u!114 &1452364838309547649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863683669054114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa5696cb3a03faf4596e5855ecff7402, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Renderers: []
+  Position: {x: 0, y: 0, z: 0}
+  Materials: []
+  InitialAlpha: 0

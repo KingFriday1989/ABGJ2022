@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 64019798181990884}
   - component: {fileID: 3707224396656952049}
   - component: {fileID: 6690002529321154893}
-  m_Layer: 0
+  - component: {fileID: -1786814266529146506}
+  m_Layer: 14
   m_Name: SM_Item_Wrench_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -439,6 +440,22 @@ MonoBehaviour:
     m_Center: {x: 4.2696943, y: 1.0461464, z: -7.920229}
     m_Extent: {x: 1.2545624, y: 1.0554018, z: 0.06984741}
   resetState: 0
+--- !u!114 &-1786814266529146506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625431102557920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa5696cb3a03faf4596e5855ecff7402, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Renderers: []
+  Position: {x: 0, y: 0, z: 0}
+  Materials: []
+  InitialAlpha: 0
 --- !u!1001 &346153249281683152
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -446,10 +463,35 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4520431017235058}
     m_Modifications:
+    - target: {fileID: 3780449981707700360, guid: 7ddf9a63d9e808a46a81d7287e8864f6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3780449982577516384, guid: 7ddf9a63d9e808a46a81d7287e8864f6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3780449982702677288, guid: 7ddf9a63d9e808a46a81d7287e8864f6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3780449982773270402, guid: 7ddf9a63d9e808a46a81d7287e8864f6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 3780449983222981192, guid: 7ddf9a63d9e808a46a81d7287e8864f6,
         type: 3}
       propertyPath: m_Name
       value: Metal Sounds
+      objectReference: {fileID: 0}
+    - target: {fileID: 3780449983222981192, guid: 7ddf9a63d9e808a46a81d7287e8864f6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 3780449983222981195, guid: 7ddf9a63d9e808a46a81d7287e8864f6,
         type: 3}
@@ -580,6 +622,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Score 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6118184346554329720, guid: 9c4578644e3b60a458830e49f6e4a9cf,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c4578644e3b60a458830e49f6e4a9cf, type: 3}

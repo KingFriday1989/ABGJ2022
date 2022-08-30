@@ -14,7 +14,9 @@ GameObject:
   - component: {fileID: 64316194984842410}
   - component: {fileID: 761541346254375548}
   - component: {fileID: 4436891250581306594}
-  m_Layer: 0
+  - component: {fileID: 2304052156845036780}
+  - component: {fileID: -8349944989885524525}
+  m_Layer: 14
   m_Name: SM_Prop_SolarPanel_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -412,7 +414,7 @@ MonoBehaviour:
     source: 0
     suffix: _frags
   showCenter: 0
-  centerPosition: {x: -1.2434378, y: 1.0461464, z: 0}
+  centerPosition: {x: -1.2434379, y: 1.0461465, z: -0.00000071525574}
   centerDirection: {x: 0, y: 0, z: 0, w: 1}
   transForm: {fileID: 0}
   meshFilter: {fileID: 0}
@@ -438,6 +440,38 @@ MonoBehaviour:
     m_Center: {x: 4.2696943, y: 1.0461464, z: -7.920229}
     m_Extent: {x: 1.2545624, y: 1.0554018, z: 0.06984741}
   resetState: 0
+--- !u!114 &2304052156845036780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921447483004116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa5696cb3a03faf4596e5855ecff7402, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Renderers: []
+  Position: {x: 0, y: 0, z: 0}
+  Materials: []
+  InitialAlpha: 0
+--- !u!114 &-8349944989885524525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921447483004116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa5696cb3a03faf4596e5855ecff7402, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Renderers: []
+  Position: {x: 0, y: 0, z: 0}
+  Materials: []
+  InitialAlpha: 0
 --- !u!1001 &7374462035035166636
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -449,6 +483,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Score 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3944254032668328483, guid: cd391001b716dab43971f48aa81058ab,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 7310369174283935062, guid: cd391001b716dab43971f48aa81058ab,
         type: 3}
@@ -520,10 +559,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4944910231734852}
     m_Modifications:
+    - target: {fileID: 3641321147432410239, guid: e9e3af8f2c1b10045896ad783520c1f9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3641321147629922005, guid: e9e3af8f2c1b10045896ad783520c1f9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 3641321148184373685, guid: e9e3af8f2c1b10045896ad783520c1f9,
         type: 3}
       propertyPath: m_Name
       value: Glass Sounds
+      objectReference: {fileID: 0}
+    - target: {fileID: 3641321148184373685, guid: e9e3af8f2c1b10045896ad783520c1f9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 3641321148184373686, guid: e9e3af8f2c1b10045896ad783520c1f9,
         type: 3}
@@ -579,6 +633,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3641321148498002805, guid: e9e3af8f2c1b10045896ad783520c1f9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3641321149367620765, guid: e9e3af8f2c1b10045896ad783520c1f9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9e3af8f2c1b10045896ad783520c1f9, type: 3}

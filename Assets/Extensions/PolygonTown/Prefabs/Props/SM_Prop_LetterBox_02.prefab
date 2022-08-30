@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4845615049415494}
   - component: {fileID: 33478109224131856}
   - component: {fileID: 23185686919962134}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: SM_Prop_LetterBox_02_Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,8 @@ GameObject:
   - component: {fileID: 64459094187815444}
   - component: {fileID: 8395372187759823470}
   - component: {fileID: 850140229894733928}
-  m_Layer: 0
+  - component: {fileID: -5484981074869682752}
+  m_Layer: 14
   m_Name: SM_Prop_LetterBox_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -522,6 +523,22 @@ MonoBehaviour:
     m_Center: {x: 4.2696943, y: 1.0461464, z: -7.920229}
     m_Extent: {x: 1.2545624, y: 1.0554018, z: 0.06984741}
   resetState: 0
+--- !u!114 &-5484981074869682752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526559398329862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa5696cb3a03faf4596e5855ecff7402, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Renderers: []
+  Position: {x: 0, y: 0, z: 0}
+  Materials: []
+  InitialAlpha: 0
 --- !u!1001 &8511994579195268941
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -533,6 +550,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wood Sounds
+      objectReference: {fileID: 0}
+    - target: {fileID: 1249909880991021180, guid: 79da8ecdae302f54a910daac9435b1c2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 1249909880991021183, guid: 79da8ecdae302f54a910daac9435b1c2,
         type: 3}
@@ -589,6 +611,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1249909881478991286, guid: 79da8ecdae302f54a910daac9435b1c2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1249909881541277468, guid: 79da8ecdae302f54a910daac9435b1c2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1249909881670026580, guid: 79da8ecdae302f54a910daac9435b1c2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1249909882544100028, guid: 79da8ecdae302f54a910daac9435b1c2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79da8ecdae302f54a910daac9435b1c2, type: 3}
 --- !u!4 &7455779082618566450 stripped
@@ -608,6 +650,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Score 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3944254032668328483, guid: cd391001b716dab43971f48aa81058ab,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 7310369174283935062, guid: cd391001b716dab43971f48aa81058ab,
         type: 3}

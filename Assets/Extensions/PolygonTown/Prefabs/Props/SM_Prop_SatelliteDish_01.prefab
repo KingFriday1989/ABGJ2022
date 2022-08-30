@@ -14,7 +14,9 @@ GameObject:
   - component: {fileID: 64753876912637872}
   - component: {fileID: 7167013497232363018}
   - component: {fileID: 1906051406321042577}
-  m_Layer: 0
+  - component: {fileID: 5261854305303563132}
+  - component: {fileID: -7943744991592587452}
+  m_Layer: 14
   m_Name: SM_Prop_SatelliteDish_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +30,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1663077113899778}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -413,7 +415,7 @@ MonoBehaviour:
     source: 0
     suffix: _frags
   showCenter: 0
-  centerPosition: {x: -1.2434378, y: 1.0461464, z: 0}
+  centerPosition: {x: -1.2434385, y: 1.0461464, z: -0.00000047683716}
   centerDirection: {x: 0, y: 0, z: 0, w: 1}
   transForm: {fileID: 0}
   meshFilter: {fileID: 0}
@@ -439,6 +441,38 @@ MonoBehaviour:
     m_Center: {x: 4.2696943, y: 1.0461464, z: -7.920229}
     m_Extent: {x: 1.2545624, y: 1.0554018, z: 0.06984741}
   resetState: 0
+--- !u!114 &5261854305303563132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663077113899778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa5696cb3a03faf4596e5855ecff7402, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Renderers: []
+  Position: {x: 0, y: 0, z: 0}
+  Materials: []
+  InitialAlpha: 0
+--- !u!114 &-7943744991592587452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663077113899778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa5696cb3a03faf4596e5855ecff7402, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Renderers: []
+  Position: {x: 0, y: 0, z: 0}
+  Materials: []
+  InitialAlpha: 0
 --- !u!1001 &6697005295187329216
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -446,10 +480,35 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4835667128413962}
     m_Modifications:
+    - target: {fileID: 3780449981707700360, guid: 7ddf9a63d9e808a46a81d7287e8864f6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3780449982577516384, guid: 7ddf9a63d9e808a46a81d7287e8864f6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3780449982702677288, guid: 7ddf9a63d9e808a46a81d7287e8864f6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3780449982773270402, guid: 7ddf9a63d9e808a46a81d7287e8864f6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 3780449983222981192, guid: 7ddf9a63d9e808a46a81d7287e8864f6,
         type: 3}
       propertyPath: m_Name
       value: Metal Sounds
+      objectReference: {fileID: 0}
+    - target: {fileID: 3780449983222981192, guid: 7ddf9a63d9e808a46a81d7287e8864f6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 3780449983222981195, guid: 7ddf9a63d9e808a46a81d7287e8864f6,
         type: 3}

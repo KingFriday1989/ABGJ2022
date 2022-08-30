@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 33825362322198716}
   - component: {fileID: 23595475052955260}
   - component: {fileID: 64309921810215670}
-  m_Layer: 0
+  - component: {fileID: 8112789548284925597}
+  m_Layer: 14
   m_Name: SM_Env_Plant_Pumpkin_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,3 +99,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 43863845008624006, guid: 4c62e486e2dd6fb449743a5e05f34ff8, type: 2}
+--- !u!114 &8112789548284925597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714241306568096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa5696cb3a03faf4596e5855ecff7402, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Renderers: []
+  Position: {x: 0, y: 0, z: 0}
+  Materials: []
+  InitialAlpha: 0

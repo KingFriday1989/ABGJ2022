@@ -21,7 +21,7 @@ namespace RayFire
         public CollisionDetectionMode meshCollision = CollisionDetectionMode.ContinuousDynamic;
         public CollisionDetectionMode clusterCollision = CollisionDetectionMode.Discrete;
         public float                  minimumMass      = 0.1f;
-        public float                  maximumMass      = 400f;
+        public float                  maximumMass      = 15000f;
         public RFMaterialPresets      materialPresets  = new RFMaterialPresets();
         public GameObject             parent;
         public float                  globalSolidity               = 1f;
@@ -157,7 +157,7 @@ namespace RayFire
         void SetGravity()
         {
             if (setGravity == true)
-                Physics.gravity = -9.81f * multiplier * Vector3.up;
+                Physics.gravity = -19.62f * multiplier * Vector3.up;
         }
 
         /// /////////////////////////////////////////////////////////

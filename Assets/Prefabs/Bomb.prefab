@@ -131,17 +131,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafd0a8e9ee856a49bf432688899df59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  showGizmo: 0
+  showGizmo: 1
   rangeType: 0
   fadeType: 0
-  range: 4
+  range: 3
   deletion: 0
-  strength: 1.5
+  strength: 2
   variation: 20
   chaos: 75
   forceByMass: 1
-  affectInactive: 0
-  affectKinematic: 0
+  affectInactive: 1
+  affectKinematic: 1
   heightOffset: 0
   delay: 0
   atStart: 1
